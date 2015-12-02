@@ -15,10 +15,15 @@ public class CubePowers : MonoBehaviour {
 	public float timer;
 	public bool bouncyActive;
 
+	public GameObject prefabCube;
+
+	public bool explosionCube = false;
+
 	// Use this for initialization
 	void Start () {
 		positionCube = new Vector3();
 		positionCube = this.transform.position;
+		explosionCube = false;
 	}
 	
 	// Update is called once per frame
@@ -28,16 +33,29 @@ public class CubePowers : MonoBehaviour {
 		BiggerGrow();
 
 		ActiveBouncy();
+
+		DuplicateObject();
+	}
+
+	void DuplicateObject()
+	{
+		if(explosionCube == true)
+		{
+			GameObject prefab;
+			prefab = Instantiate(prefabCube, this.transform.position, this.transform.rotation) as GameObject;
+			explosionCube = false;
+			prefab.GetComponent<Rigidbody>().AddExplosionForce(100,prefab.transform.position, 10, 3.0f);
+		}
 	}
 
 	void ActiveBouncy()
 	{
-		if(timer < 10.0f && bouncyActive == true)
+		if(timer < 5.0f && bouncyActive == true)
 		{
 			timer += Time.deltaTime;
 			this.GetComponent<BoxCollider>().material = bouncyMat;
 		}
-		if(timer >= 1.0f && bouncyActive == true)
+		if(timer >= 5.0f && bouncyActive == true)
 		{
 			bouncyActive = false;
 			this.GetComponent<BoxCollider>().material = null;
@@ -96,7 +114,6 @@ public class CubePowers : MonoBehaviour {
 		{
 			this.transform.localScale = new Vector3 (this.transform.localScale.x, minHeight, this.transform.localScale.z);
 			this.transform.position = new Vector3 (positionCube.x, positionCube.y + this.transform.localScale.y / 2, positionCube.z);
-			//heightGrowingAcive = true;
 		}
 	}
 }

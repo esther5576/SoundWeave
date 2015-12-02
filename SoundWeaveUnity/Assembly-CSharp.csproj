@@ -45,10 +45,10 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\CubePowers.cs" />
      <Compile Include="Assets\Scripts\CameraSysthemEsther\CameraSysthemEstherV2.cs" />
      <Compile Include="Assets\Scripts\CameraSysthemEsther\CameraSysthemFreeCameraLoopEstherV2.cs" />
      <Compile Include="Assets\Scripts\CameraSysthemEsther\CameraSysthemPivotEstherV2.cs" />
+     <Compile Include="Assets\Scripts\CubePowers.cs" />
      <Compile Include="Assets\Scripts\MusicPower\ActivationV2.cs" />
      <Compile Include="Assets\Scripts\MusicPower\ActivationV3.cs" />
      <Compile Include="Assets\Scripts\MusicPower\SoundOutpu.cs" />
@@ -58,7 +58,7 @@
      <Compile Include="Assets\Scripts\MusicPower\VisualizeV2.cs" />
      <Compile Include="Assets\Scripts\MusicPower\activation.cs" />
      <Compile Include="Assets\Scripts\PlayerInput.cs" />
-     <Compile Include="Assets\Scripts\Power.cs" />
+     <Compile Include="Assets\Scripts\Powers.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonControllerEsther\CharMove.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonControllerEsther\UserInput.cs" />
      <Compile Include="Assets\other\ColorSuite\ColorSuite.cs" />
