@@ -92,12 +92,25 @@ public class PlayerInput : MonoBehaviour
 		float X = Input.GetAxis ("LeftStickX");
 		float Y = Input.GetAxis ("LeftStickY");
 
+		#region stability of movement 
+		if ((X + Y == 0) && grounded == true) 
+		{
+			this.GetComponent<Rigidbody> ().MovePosition (transform.localPosition);
+			this.GetComponent<Rigidbody> ().velocity = new Vector3(0,0,0);
+		}
+		if (/*(X + Y == 0) &&*/ grounded == false) 
+		{
+			this.GetComponent<Rigidbody> ().velocity += new Vector3(0,-1.5f,0);
+		}
 
 		Physics.gravity = new Vector3 (0, -30.0F, 0);
-		//Debug.Log (this.GetComponent<Rigidbody> ().velocity);
+		#endregion
+
+
 
 		Move (X, Y);
 		Jump ();
+
 		GroundCheck ();
 	}
 

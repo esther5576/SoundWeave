@@ -6,7 +6,7 @@
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
 	<RootNamespace></RootNamespace>
-	<ProjectGuid>{3DE3236B-C988-8576-A0AE-3732877FCA4E}</ProjectGuid>
+	<ProjectGuid>{7C214BF9-DCD9-4CA7-121E-1B9FC7F59250}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,18 +45,20 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CubePowers.cs" />
      <Compile Include="Assets\Scripts\CameraSysthemEsther\CameraSysthemEstherV2.cs" />
      <Compile Include="Assets\Scripts\CameraSysthemEsther\CameraSysthemFreeCameraLoopEstherV2.cs" />
      <Compile Include="Assets\Scripts\CameraSysthemEsther\CameraSysthemPivotEstherV2.cs" />
-     <Compile Include="Assets\Scripts\MusicPowe\ActivationV2.cs" />
-     <Compile Include="Assets\Scripts\MusicPowe\ActivationV3.cs" />
-     <Compile Include="Assets\Scripts\MusicPowe\SoundOutpu.cs" />
-     <Compile Include="Assets\Scripts\MusicPowe\SoundOutputV2.cs" />
-     <Compile Include="Assets\Scripts\MusicPowe\Visualize.cs" />
-     <Compile Include="Assets\Scripts\MusicPowe\Visualize3d.cs" />
-     <Compile Include="Assets\Scripts\MusicPowe\VisualizeV2.cs" />
-     <Compile Include="Assets\Scripts\MusicPowe\activation.cs" />
+     <Compile Include="Assets\Scripts\MusicPower\ActivationV2.cs" />
+     <Compile Include="Assets\Scripts\MusicPower\ActivationV3.cs" />
+     <Compile Include="Assets\Scripts\MusicPower\SoundOutpu.cs" />
+     <Compile Include="Assets\Scripts\MusicPower\SoundOutputV2.cs" />
+     <Compile Include="Assets\Scripts\MusicPower\Visualize.cs" />
+     <Compile Include="Assets\Scripts\MusicPower\Visualize3d.cs" />
+     <Compile Include="Assets\Scripts\MusicPower\VisualizeV2.cs" />
+     <Compile Include="Assets\Scripts\MusicPower\activation.cs" />
      <Compile Include="Assets\Scripts\PlayerInput.cs" />
+     <Compile Include="Assets\Scripts\Power.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonControllerEsther\CharMove.cs" />
      <Compile Include="Assets\Scripts\ThirdPersonControllerEsther\UserInput.cs" />
      <Compile Include="Assets\other\ColorSuite\ColorSuite.cs" />
