@@ -22,6 +22,8 @@ public class Powers : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
+		trigger1 = true;
+		trigger2 = true;
 		actualTimer = timer;
 	}
 	
@@ -50,12 +52,11 @@ public class Powers : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.Joystick1Button5)) {
 			FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/sonR1", transform.localPosition);
 		}
-		FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/sonR2");
-		if (Input.GetAxis ("360_Triggers") < -0.9 /*&& countLeft == 0*/ && trigger1 == false) {
+		if (Input.GetAxis ("360_Triggers") < -0.9 && trigger1 == false) {
 			FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/sonL2", transform.localPosition);
 			trigger1 = true;
 		} 
-		if (Input.GetAxis ("360_Triggers") > 0.9 /*&& countRight == 0*/ && trigger2 == false) {
+		if (Input.GetAxis ("360_Triggers") > 0.9 && trigger2 == false) {
 			FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/sonR2", transform.localPosition);
 			trigger2 = true;
 		}
@@ -72,37 +73,22 @@ public class Powers : MonoBehaviour
 				other.GetComponent<CubePowers> ().positionCube = other.transform.position;
 				other.GetComponent<CubePowers> ().heightGrowingAcive = true;
 				other.GetComponent<Renderer> ().material.color = Color.red;
-				//FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/sonL1");
-				
 			}
 			if (Input.GetKeyDown (KeyCode.Joystick1Button5)) {
 				other.GetComponent<CubePowers> ().biggerGrowActive = true;
 				other.GetComponent<Renderer> ().material.color = Color.blue;
-				//FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/sonR1");
 			}
 			
 			if (Input.GetAxis ("360_Triggers") < -0.9 /*&& countLeft == 0*/) {
 				other.GetComponent<CubePowers> ().bouncyActive = true;
 				other.GetComponent<Renderer> ().material.color = Color.green;
-				//countLeft ++;
-				//FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/sonL2");
 			} 
-			/*else if (Input.GetAxis ("360_Triggers") < -0.9) 
-			{
-				countLeft = 0;
-			}*/
-			
 			if (Input.GetAxis ("360_Triggers") > 0.9 /*&& countRight == 0*/) {
 				other.GetComponent<CubePowers> ().explosionCube = true;
 				other.GetComponent<Renderer> ().material.color = Color.yellow;
 				boom = true;
 				countLeft ++;
-				//FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/sonR2");
 			} 
-			/*else if (Input.GetAxis ("360_Triggers") < 0.9) 
-			{
-				countRight = 0;
-			}*/
 		}
 	}
 
