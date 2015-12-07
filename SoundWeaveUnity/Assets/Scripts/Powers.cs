@@ -19,6 +19,9 @@ public class Powers : MonoBehaviour
 
 	public bool trigger1;
 	public bool trigger2;
+
+	public bool trigger3;
+	public bool trigger4;
 	// Use this for initialization
 	void Start ()
 	{
@@ -79,16 +82,25 @@ public class Powers : MonoBehaviour
 				other.GetComponent<Renderer> ().material.color = Color.blue;
 			}
 			
-			if (Input.GetAxis ("360_Triggers") < -0.9 /*&& countLeft == 0*/) {
+			if (Input.GetAxis ("360_Triggers") < -0.9 && trigger3 == false) {
 				other.GetComponent<CubePowers> ().bouncyActive = true;
 				other.GetComponent<Renderer> ().material.color = Color.green;
+				trigger3 =  true;
+				boom = true;
 			} 
-			if (Input.GetAxis ("360_Triggers") > 0.9 /*&& countRight == 0*/) {
+			if (Input.GetAxis ("360_Triggers") > 0.9 && trigger4 == false) {
 				other.GetComponent<CubePowers> ().explosionCube = true;
 				other.GetComponent<Renderer> ().material.color = Color.yellow;
 				boom = true;
-				countLeft ++;
+
+				//dupliquer 1 seul cube trigger4 doit etre activé
+				//trigger4 = true;
 			} 
+			if ((Input.GetAxis ("360_Triggers") < 0.9 && Input.GetAxis ("360_Triggers") > -0.9)) {
+				trigger3 = false;
+				trigger4 = false;
+
+			}
 		}
 	}
 
