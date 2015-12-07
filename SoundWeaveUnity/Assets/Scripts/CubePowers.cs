@@ -13,11 +13,15 @@ public class CubePowers : MonoBehaviour {
 
 	public PhysicMaterial bouncyMat;
 	public float timer;
-	public bool bouncyActive;
+	public bool bouncyActive = false;
 
 	public GameObject prefabCube;
 
 	public bool explosionCube = false;
+
+	int count1;
+	int count2;
+	int count3;
 
 	// Use this for initialization
 	void Start () {
@@ -45,6 +49,7 @@ public class CubePowers : MonoBehaviour {
 			prefab = Instantiate(prefabCube, this.transform.position, this.transform.rotation) as GameObject;
 			explosionCube = false;
 			prefab.GetComponent<Rigidbody>().AddExplosionForce(100,prefab.transform.position, 10, 3.0f);
+			this.gameObject.GetComponent<Renderer> ().material.color = Color.white;
 		}
 	}
 
@@ -62,9 +67,11 @@ public class CubePowers : MonoBehaviour {
 			timer = 0;
 		}
 
-		if(bouncyActive == false)
+		if(bouncyActive == false && count3 == 0)
 		{
+			count3 ++;
 			this.GetComponent<BoxCollider>().material = null;
+			this.gameObject.GetComponent<Renderer> ().material.color = Color.white;
 			timer = 0;
 		}
 	}
@@ -89,6 +96,12 @@ public class CubePowers : MonoBehaviour {
 		{
 			this.transform.localScale = new Vector3 (minHeight, this.transform.localScale.y, minHeight);
 		}
+
+		if(count1 == 0 && biggerGrowActive == false && this.transform.localScale.x < minHeight)
+		{
+			count1 ++;
+			this.GetComponent<Renderer> ().material.color = Color.white;
+		}
 	}
 
 	void HeightGrow()
@@ -96,24 +109,30 @@ public class CubePowers : MonoBehaviour {
 		if(this.transform.localScale.y < maxHeight && heightGrowingAcive == true)
 		{
 			this.transform.localScale += new Vector3(0, heightPower, 0) * Time.deltaTime;
-			this.transform.position = new Vector3 (positionCube.x, positionCube.y + this.transform.localScale.y / 2, positionCube.z);
+			this.transform.position = new Vector3 (positionCube.x, positionCube.y /*+ this.transform.localScale.y*/ / 2, positionCube.z);
 		}
 		if(this.transform.localScale.y > maxHeight && heightGrowingAcive == true)
 		{
 			this.transform.localScale = new Vector3 (this.transform.localScale.x, maxHeight, this.transform.localScale.z);
-			this.transform.position = new Vector3 (positionCube.x, positionCube.y + this.transform.localScale.y / 2, positionCube.z);
+			this.transform.position = new Vector3 (positionCube.x, positionCube.y /*+ this.transform.localScale.y*/ / 2, positionCube.z);
 			heightGrowingAcive = false;
 		}
 
 		if(this.transform.localScale.y > minHeight && heightGrowingAcive == false)
 		{
 			this.transform.localScale -= new Vector3(0, heightPower, 0) * Time.deltaTime;
-			this.transform.position = new Vector3 (positionCube.x, positionCube.y + this.transform.localScale.y / 2, positionCube.z);
+			this.transform.position = new Vector3 (positionCube.x, positionCube.y /*+ this.transform.localScale.y*/ / 2, positionCube.z);
 		}
 		if(this.transform.localScale.y < minHeight && heightGrowingAcive == false)
 		{
 			this.transform.localScale = new Vector3 (this.transform.localScale.x, minHeight, this.transform.localScale.z);
-			this.transform.position = new Vector3 (positionCube.x, positionCube.y + this.transform.localScale.y / 2, positionCube.z);
+			this.transform.position = new Vector3 (positionCube.x, positionCube.y /*+ this.transform.localScale.y*/ / 2, positionCube.z);
+		}
+
+		if(count2 == 0 && heightGrowingAcive == false && this.transform.localScale.y < minHeight)
+		{
+			count2 ++;
+			this.GetComponent<Renderer> ().material.color = Color.white;
 		}
 	}
 }
