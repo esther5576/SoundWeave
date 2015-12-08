@@ -42,7 +42,7 @@ public class CubePowers : MonoBehaviour {
 
 		if(heightGrowingAcive == false && biggerGrowActive == false && bouncyActive == false  && explosionCube == false)
 		{
-			this.GetComponent<Renderer> ().material.color = Color.white;
+			//this.GetComponent<Renderer> ().material.color = Color.white;
 		}
 	}
 

@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\CameraSysthemEsther\CameraSysthemEstherV2.cs" />
      <Compile Include="Assets\Scripts\CameraSysthemEsther\CameraSysthemFreeCameraLoopEstherV2.cs" />
      <Compile Include="Assets\Scripts\CameraSysthemEsther\CameraSysthemPivotEstherV2.cs" />
+     <Compile Include="Assets\Scripts\CubeCameraOcclusion.cs" />
      <Compile Include="Assets\Scripts\CubePowers.cs" />
      <Compile Include="Assets\Scripts\MusicPower\ActivationV2.cs" />
      <Compile Include="Assets\Scripts\MusicPower\ActivationV3.cs" />

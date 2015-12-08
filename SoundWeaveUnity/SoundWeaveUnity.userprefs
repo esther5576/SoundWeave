@@ -1,9 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Powers.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CubeCameraOcclusion.cs">
     <Files>
+      <File FileName="Assets\Scripts\CubeCameraOcclusion.cs" Line="56" Column="6" />
       <File FileName="Assets\Scripts\Powers.cs" Line="80" Column="54" />
-      <File FileName="Assets\Scripts\CubePowers.cs" Line="45" Column="63" />
+      <File FileName="Assets\Scripts\CubePowers.cs" Line="45" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
