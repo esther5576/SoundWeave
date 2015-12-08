@@ -1,0 +1,2 @@
+Use @X@ to |jump|.
+Use @Joysticks@ to |move| and |look| arround.
