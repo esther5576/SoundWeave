@@ -45,6 +45,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\ShowMeshBounds.cs" />
      <Compile Include="Assets\TextOutputExample\TextDiscution.cs" />
      <None Include="Assets\TextOutputExample\LinesTutorial1.txt" />
  <Reference Include="UnityEngine.UI">

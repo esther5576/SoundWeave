@@ -17,7 +17,7 @@ public class TextDiscution : MonoBehaviour
 	[Header(" ")]
 	
 	//La vitesse d'apparition des lettes
-	public float letterPause = 0.2f;
+	public float letterPause = 0.02f;
 	private float _letPause;
 	
 	//Le message qui va etre reproduit
@@ -69,7 +69,11 @@ public class TextDiscution : MonoBehaviour
 		_personTalking.GetComponent<Text> ().text = "";
 		//message = "This text is @bold@ and this text is #italic# and this one is |red| %a%nd the last one is $blue$";
 		message = dialogLines[0];
-		
+
+		_wholeCanvas.GetComponent<CanvasGroup> ().alpha = 1;
+		_wholeCanvas.GetComponent<CanvasGroup> ().blocksRaycasts = true;
+		_wholeCanvas.GetComponent<CanvasGroup> ().interactable = true;
+
 		StartCoroutine (TypeText ());
 	}
 	
