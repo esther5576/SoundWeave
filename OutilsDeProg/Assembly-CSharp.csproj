@@ -48,6 +48,7 @@
      <Compile Include="Assets\BoxDebugMeshAndBounds\PhysicsVisualizer.cs" />
      <Compile Include="Assets\BoxDebugMeshAndBounds\ShowBoxColliderBounds.cs" />
      <Compile Include="Assets\BoxDebugMeshAndBounds\ShowBoxMeshBounds.cs" />
+     <Compile Include="Assets\ImagesPPTLike\PPTLikeSlides.cs" />
      <Compile Include="Assets\TextOutputExample\TextDiscution.cs" />
      <None Include="Assets\TextOutputExample\LinesTutorial1.txt" />
  <Reference Include="UnityEngine.UI">

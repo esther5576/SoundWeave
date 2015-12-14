@@ -7,6 +7,8 @@ using System.Collections.Generic;
 
 public class PhysicsVisualizer : MonoBehaviour {
 
+	[Header("List of Transforms to debug")]
+	[Tooltip("List of boxes to debug physics")]
 	public List<Transform> _boxesToDebug = new List<Transform>();
 	
 	void Update ()
