@@ -35,9 +35,9 @@ public class VisualizeV2 : MonoBehaviour
 
 		//Monter et descendre
 		Vector3 _previousScale = this.transform.localScale;
-		_previousScale.y = (Mathf.Lerp (_previousScale.y, _spectrum [_range] * 15.0f, Time.deltaTime * 20.0f)) + 1f;
-		_previousScale.x = (Mathf.Lerp (_previousScale.x, _spectrum [_range] * 5.0f, Time.deltaTime * 30.0f)) + 3f;
-		_previousScale.z = (Mathf.Lerp (_previousScale.z, _spectrum [_range] * 5.0f, Time.deltaTime * 30.0f)) + 3f;
+		_previousScale.y = (Mathf.Lerp (_previousScale.y, _spectrum [_range] * 5.0f, Time.deltaTime * 10.0f)) + 0.5f;
+		_previousScale.x = (Mathf.Lerp (_previousScale.x, _spectrum [_range] * 5.0f, Time.deltaTime * 50.0f)) + 0.5f;
+		_previousScale.z = (Mathf.Lerp (_previousScale.z, _spectrum [_range] * 5.0f, Time.deltaTime * 50.0f)) + 0.5f;
 		this.transform.localScale = _previousScale;
 		//this.transform.position = new Vector3 (this.transform.position.x, this.transform.localScale.y / 2, this.transform.position.z);
 

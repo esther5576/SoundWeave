@@ -40,9 +40,6 @@ public class TextDiscution : MonoBehaviour
 	
 	//Faster canvas
 	GameObject _fastForwardText;
-	
-	string _blackStart = "<b>";
-	string _blackEnd = "</b>";
 
 	//Message 
 	public TextAsset textFile;
