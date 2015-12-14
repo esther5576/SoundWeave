@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\OutilsDeProg\Assets\ShowMeshBounds.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Powers.cs">
     <Files>
-      <File FileName="..\OutilsDeProg\Assets\ShowMeshBounds.cs" Line="24" Column="1" />
+      <File FileName="Assets\Scripts\CubePowers.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Powers.cs" Line="102" Column="29" />
+      <File FileName="Assets\Scripts\PlayerInput.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

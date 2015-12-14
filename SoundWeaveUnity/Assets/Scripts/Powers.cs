@@ -22,6 +22,9 @@ public class Powers : MonoBehaviour
 
 	public bool trigger3;
 	public bool trigger4;
+
+	public float _totalTime = 0.1f;
+	public float _time;
 	// Use this for initialization
 	void Start ()
 	{
@@ -95,11 +98,18 @@ public class Powers : MonoBehaviour
 
 				//dupliquer 1 seul cube trigger4 doit etre activé
 				//trigger4 = true;
+
+				_time += Time.deltaTime;
+
+				if(_time >= _totalTime)
+				{
+					trigger4 = true;
+				}
 			} 
 			if ((Input.GetAxis ("360_Triggers") < 0.9 && Input.GetAxis ("360_Triggers") > -0.9)) {
 				trigger3 = false;
 				trigger4 = false;
-
+				_time = 0;
 			}
 		}
 	}
