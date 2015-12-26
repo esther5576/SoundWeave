@@ -1,10 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Powers.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\Desktop\DM\Assets\Modules\[EXAM] Partiel\Scripts\OrbitCameraScript.cs">
     <Files>
-      <File FileName="Assets\Scripts\CubePowers.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\Powers.cs" Line="102" Column="29" />
-      <File FileName="Assets\Scripts\PlayerInput.cs" Line="1" Column="1" />
+      <File FileName="..\..\..\..\Desktop\DM\Assets\Modules\[EXAM] Partiel\Scripts\OrbitCameraScript.cs" Line="4" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

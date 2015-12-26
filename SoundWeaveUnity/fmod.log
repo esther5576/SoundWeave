@@ -5,8 +5,9 @@
 [LOG] SystemI::close                           : Remove miscllaneous DSP stuff.
 [LOG] SystemI::close                           : done.
 
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=8, nSamplesPerSec=48000, nAvgBytesPerSec=1536000, nBlockAlign=32, wBitsPerSample=32, cbSize=22.
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x0000063F, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
+[WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
 [LOG] Thread::initThread                       : Initializing FMOD (WASAPI) feeder thread.  priority 0
 [LOG] Thread::initThread                       : - Stacksize 0.  Stack pointer 0000000000000000 : usesemaphore = 0 : sleeptime = 0
 [LOG] Thread::callback                         : * FMOD (WASAPI) feeder thread started
@@ -30,21 +31,21 @@
 [LOG] Profile::init                            : Profiler listening on port: 9264
 [LOG] Manager::readBank                        : fileversion = 68, compatVersion = 68 (oldest = 44, newest = 68)
 [LOG] Manager::readBank                        : fileversion = 68, compatVersion = 68 (oldest = 44, newest = 68)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
+[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/Soundwave_v1.02\Build\Desktop/Master Bank.bank : mode 0a010202
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
 [LOG] Thread::initThread                       : Initializing FMOD nonblocking thread (0).  priority 1
 [LOG] Thread::initThread                       : - Stacksize 81920.  Stack pointer 0000000000000000 : usesemaphore = 1 : sleeptime = 0
 [LOG] Thread::callback                         : * FMOD nonblocking thread (0) started
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 0000000025B06FB0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
+[LOG] SystemI::createSound                     : setdata soundi = 00000000272EB8D8 : node = 000000002730BDB0
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000272421D0.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000272EB8D8
+[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/Soundwave_v1.02\Build\Desktop/Master Bank.bank : mode 0a010202
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 96704
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 18080
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B070B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000002730BEB8
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
@@ -52,30 +53,30 @@
 [LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
 [LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
 [LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 43322 samples, lengthbytes 10912
+[LOG] SystemI::createSample                    :     mode 0a010202 length 105600 samples, lengthbytes 27456
 [LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 43322, lengthbytes 10912, channels 2, format 2, freq 48000, mode 0a01020a
+[LOG] SystemI::createSample                    :     output = 0000000027336DF8
+[LOG] OutputSoftware::createSample             :     lengthpcm 105600, lengthbytes 27456, channels 2, format 2, freq 48000, mode 0a01020a
 [LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
 
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000272EB8D8
 [WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
+[LOG] SoundI::release                          : (null) (00000000272EB8D8)
+[LOG] SoundI::release                          : release subsounds. (00000000272EB8D8)
+[LOG] SoundI::release                          :     (null) (00000000272EBED8)
+[LOG] SoundI::release                          : release codec. (00000000272EB8D8)
+[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/Soundwave_v1.02\Build\Desktop/Master Bank.bank : mode 0a010202
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 0000000025B06BF0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
+[LOG] SystemI::createSound                     : setdata soundi = 0000000027245B08 : node = 0000000027243500
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000272421D0.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000027245B08
+[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/Soundwave_v1.02\Build\Desktop/Master Bank.bank : mode 0a010202
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 96704
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 18080
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B06CF8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000027243608
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
@@ -83,30 +84,30 @@
 [LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
 [LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
 [LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 43322 samples, lengthbytes 10912
+[LOG] SystemI::createSample                    :     mode 0a010202 length 48000 samples, lengthbytes 12672
 [LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 43322, lengthbytes 10912, channels 2, format 2, freq 48000, mode 0a01020a
+[LOG] SystemI::createSample                    :     output = 0000000027336DF8
+[LOG] OutputSoftware::createSample             :     lengthpcm 48000, lengthbytes 12672, channels 2, format 2, freq 48000, mode 0a01020a
 [LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
 
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000027245B08
 [WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
+[LOG] SoundI::release                          : (null) (0000000027245B08)
+[LOG] SoundI::release                          : release subsounds. (0000000027245B08)
+[LOG] SoundI::release                          :     (null) (0000000027315B48)
+[LOG] SoundI::release                          : release codec. (0000000027245B08)
+[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/Soundwave_v1.02\Build\Desktop/Master Bank.bank : mode 0a010202
 [LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
 [LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 0000000025B06FB0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
+[LOG] SystemI::createSound                     : setdata soundi = 0000000027245B08 : node = 0000000027243500
+[LOG] SystemI::createSound                     : add node to async list : head = 00000000272421D0.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000027245B08
+[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/Soundwave_v1.02\Build\Desktop/Master Bank.bank : mode 0a010202
 [LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 96704
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 18080
 [LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B070B8
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000027243608
 [LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
 [LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
 [LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
@@ -114,855 +115,18 @@
 [LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
 [LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
 [LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 43322 samples, lengthbytes 10912
+[LOG] SystemI::createSample                    :     mode 0a010202 length 48000 samples, lengthbytes 12672
 [LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 43322, lengthbytes 10912, channels 2, format 2, freq 48000, mode 0a01020a
+[LOG] SystemI::createSample                    :     output = 0000000027336DF8
+[LOG] OutputSoftware::createSample             :     lengthpcm 48000, lengthbytes 12672, channels 2, format 2, freq 48000, mode 0a01020a
 [LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
 
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000027245B08
 [WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 0000000025B06E70
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B06F78
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 43007 samples, lengthbytes 9536
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 43007, lengthbytes 9536, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 0000000025B06AB0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B06BB8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 43007 samples, lengthbytes 9536
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 43007, lengthbytes 9536, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 0000000025B070F0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B071F8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 43007 samples, lengthbytes 9536
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 43007, lengthbytes 9536, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 0000000025B070F0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B071F8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 43322 samples, lengthbytes 10912
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 43322, lengthbytes 10912, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 0000000025B070F0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B071F8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 57631 samples, lengthbytes 12960
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 57631, lengthbytes 12960, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E1E8 : node = 0000000025B066F0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E1E8
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B067F8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E1E8
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E1E8)
-[LOG] SoundI::release                          :     (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release codec. (0000000025A3E1E8)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 0000000025B06D30
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B06E38
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025B79B08 : node = 0000000025B06E70
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025B79B08
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000025B06F78
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 57631 samples, lengthbytes 12960
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 57631, lengthbytes 12960, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025B79B08
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SoundI::release                          : (null) (0000000025B79B08)
-[LOG] SoundI::release                          : release subsounds. (0000000025B79B08)
-[LOG] SoundI::release                          :     (null) (0000000025B7A918)
-[LOG] SoundI::release                          : release codec. (0000000025B79B08)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 000000001ED34040
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED34148
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 57631 samples, lengthbytes 12960
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 57631, lengthbytes 12960, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 000000001ED33DC0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED33EC8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 57631 samples, lengthbytes 12960
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 57631, lengthbytes 12960, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 000000001ED33C80
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED33D88
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 57631 samples, lengthbytes 12960
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 57631, lengthbytes 12960, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 000000001ED34040
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED34148
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 000000001ED33B40
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED33C48
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 000000001ED34180
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED34288
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 000000001ED34180
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED34288
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 000000001ED33B40
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED33C48
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 000000001EE04988 : node = 000000001ED33C80
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001EE04988
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED33D88
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 57631 samples, lengthbytes 12960
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 57631, lengthbytes 12960, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001EE04988
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SoundI::release                          : (null) (000000001EE04988)
-[LOG] SoundI::release                          : release subsounds. (000000001EE04988)
-[LOG] SoundI::release                          :     (null) (000000001EE04348)
-[LOG] SoundI::release                          : release codec. (000000001EE04988)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E1E8 : node = 000000001ED34040
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E1E8
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED34148
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 57631 samples, lengthbytes 12960
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 57631, lengthbytes 12960, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E1E8
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 000000001ED2E9B8 : node = 000000001ED34180
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001ED2E9B8
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED34288
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001ED2E9B8
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 000000001ED2EB48 : node = 000000001ED33B40
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 000000001ED2EB48
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED33C48
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 43322 samples, lengthbytes 10912
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 43322, lengthbytes 10912, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 000000001ED2EB48
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (000000001ED2E9B8)
-[LOG] SoundI::release                          : release subsounds. (000000001ED2E9B8)
-[LOG] SoundI::release                          :     (null) (000000001ED2ECD8)
-[LOG] SoundI::release                          : release codec. (000000001ED2E9B8)
-[LOG] SoundI::release                          : (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E1E8)
-[LOG] SoundI::release                          :     (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release codec. (0000000025A3E1E8)
-[LOG] SoundI::release                          : (null) (000000001ED2EB48)
-[LOG] SoundI::release                          : release subsounds. (000000001ED2EB48)
-[LOG] SoundI::release                          :     (null) (000000001ED2DBA8)
-[LOG] SoundI::release                          : release codec. (000000001ED2EB48)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 000000001ED34180
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED34288
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A39E98 : node = 000000001ED33B40
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A39E98
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED33C48
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 57631 samples, lengthbytes 12960
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 57631, lengthbytes 12960, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A39E98
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3A028 : node = 000000001ED34180
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3A028
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 000000001ED34288
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3A028
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3A028)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3A028)
-[LOG] SoundI::release                          :     (null) (0000000025A3A668)
-[LOG] SoundI::release                          : release codec. (0000000025A3A028)
-[LOG] SoundI::release                          : (null) (0000000025A39E98)
-[LOG] SoundI::release                          : release subsounds. (0000000025A39E98)
-[LOG] SoundI::release                          :     (null) (0000000025A3A7F8)
-[LOG] SoundI::release                          : release codec. (0000000025A39E98)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E1E8 : node = 00000000212E24E0
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E1E8
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     :     FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] OutputSoftware::createSample             :     lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     :     setdata soundi = 0000000025A3E058 : node = 00000000212E2620
-[LOG] SystemI::createSound                     :     add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000212E25E8
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 38369 samples, lengthbytes 11104
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 38369, lengthbytes 11104, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E1E8
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000212E2728
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 57631 samples, lengthbytes 12960
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 57631, lengthbytes 12960, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E1E8)
-[LOG] SoundI::release                          :     (null) (0000000025BC6468)
-[LOG] SoundI::release                          : release codec. (0000000025A3E1E8)
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025BC5B08)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 00000000212E2260
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000212E2368
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 43322 samples, lengthbytes 10912
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 43322, lengthbytes 10912, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
-[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
-[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
-[LOG] SystemI::createSound                     : setdata soundi = 0000000025A3E058 : node = 00000000212E2760
-[LOG] SystemI::createSound                     : add node to async list : head = 000000001EE0C410.  list count = 0
-[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 0000000025A3E058
-[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/SoundWave\Build\Desktop/Master Bank.bank : mode 0a010202
-[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
-[LOG] SystemI::createSoundInternal             :     exinfo->length             = 44928
-[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 13856
-[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 00000000212E2868
-[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
-[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
-[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
-[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
-[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
-[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
-[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
-[LOG] SystemI::createSample                    :     mode 0a010202 length 43322 samples, lengthbytes 10912
-[LOG] SystemI::createSample                    :     channels = 2
-[LOG] SystemI::createSample                    :     output = 0000000025A3DEC8
-[LOG] OutputSoftware::createSample             :     lengthpcm 43322, lengthbytes 10912, channels 2, format 2, freq 48000, mode 0a01020a
-[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
-
-[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 0000000025A3E058
-[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
-[LOG] SoundI::release                          : (null) (0000000025A3E058)
-[LOG] SoundI::release                          : release subsounds. (0000000025A3E058)
-[LOG] SoundI::release                          :     (null) (0000000025A3E1E8)
-[LOG] SoundI::release                          : release codec. (0000000025A3E058)
+[LOG] SoundI::release                          : (null) (0000000027245B08)
+[LOG] SoundI::release                          : release subsounds. (0000000027245B08)
+[LOG] SoundI::release                          :     (null) (0000000027315B48)
+[LOG] SoundI::release                          : release codec. (0000000027245B08)
 [LOG] Thread::callback                         : * FMOD Studio update thread finished
 [LOG] Thread::close                            : FMOD Studio update thread thread destroyed
 [LOG] Thread::callback                         : * FMOD Studio load thread finished
