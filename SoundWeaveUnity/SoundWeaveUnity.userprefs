@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\..\..\Desktop\DM\Assets\Modules\[EXAM] Partiel\Scripts\OrbitCameraScript.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\NewSoundWave\C#\PlayerInputPower.cs">
     <Files>
-      <File FileName="..\..\..\..\Desktop\DM\Assets\Modules\[EXAM] Partiel\Scripts\OrbitCameraScript.cs" Line="4" Column="1" />
+      <File FileName="Assets\NewSoundWave\C#\PlayerInputPower.cs" Line="40" Column="4" />
+      <File FileName="Assets\NewSoundWave\C#\FmodSounds.cs" Line="1" Column="1" />
+      <File FileName="Assets\NewSoundWave\C#\CubeModifications.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
