@@ -51,6 +51,10 @@
      <Compile Include="Assets\NewSoundWave\C#\CameraSysthemEsther\CameraSysthemPivotEstherV2.cs" />
      <Compile Include="Assets\NewSoundWave\C#\CubeModifications.cs" />
      <Compile Include="Assets\NewSoundWave\C#\FmodSounds.cs" />
+     <Compile Include="Assets\NewSoundWave\C#\NewPlayerController\CharacterMove.cs" />
+     <Compile Include="Assets\NewSoundWave\C#\NewPlayerController\FootCollider.cs" />
+     <Compile Include="Assets\NewSoundWave\C#\NewPlayerController\Glide.cs" />
+     <Compile Include="Assets\NewSoundWave\C#\NewPlayerController\Jump.cs" />
      <Compile Include="Assets\NewSoundWave\C#\PlayerInput.cs" />
      <Compile Include="Assets\NewSoundWave\C#\PlayerInputPower.cs" />
      <Compile Include="Assets\OldWork\Plugins\FMOD\BankRefAttribute.cs" />
@@ -222,6 +226,7 @@
      <None Include="Assets\OldWork\other\Spektr\Scatter\Shaders\Destruction.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
      <None Include="Assets\OldWork\other\ColorSuite\Shader\ColorSuite.shader" />
+     <None Include="Assets\NewSoundWave\Shader\Internal-DeferredShading.shader" />
      <None Include="Assets\OldWork\other\TextAnimation\ClassicNoise3D.cginc" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
@@ -249,6 +254,7 @@
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\NewSoundWave\Shader\Internal-PrePassLighting.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
      <None Include="Assets\OldWork\other\Kino\Vignette\Shader\Vignette.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />

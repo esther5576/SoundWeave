@@ -39,6 +39,8 @@ public class CubeModifications : MonoBehaviour
 	public bool ActualKinematicTimerActive2;
 	#endregion
 
+	public float Force = 100;
+
 	// Update is called once per frame
 	void Update ()
 	{
@@ -81,6 +83,12 @@ public class CubeModifications : MonoBehaviour
 			}
 		}
 		#endregion
+
+
+		//TODO Transformer rotations negatives en positives
+		//OU faire toutes les conditions negatives
+
+
 	}
 
 	#region Bigger Grow cube transformation
@@ -135,7 +143,46 @@ public class CubeModifications : MonoBehaviour
 		prefab.GetComponent<CubeModifications> ().divisionOfCubesActive = false;
 		divisionOfCubesActive = false;
 		prefab.GetComponent<Rigidbody> ().AddExplosionForce (explosionForce, prefab.transform.position, explosionRange, upwardsModifierOfExplosion);
-
 	}
 	#endregion
+
+	void OnCollisionStay (Collision collider)
+	{
+		if (GrowHeightFunctionActive == true) {
+			//other.GetComponent<Rigidbody> ().AddForce (Camera.main.transform.forward * Force, ForceMode.Impulse);
+			if (collider.transform.tag == "Player") {
+				RaycastHit _hit;
+				Ray _R = new Ray (collider.transform.position, -collider.transform.up);
+				if (Physics.Raycast (_R, out _hit)) {
+					Debug.DrawRay (transform.position, -transform.up, Color.red);
+					Vector3 HitNormal = _hit.normal;
+					//Debug.Log (HitNormal);
+					//Vector3 _Vperp = Vector3.Cross (HitNormal, new Vector3 (HitNormal.x, 0, HitNormal.z));
+					//Vector3 UpDir = Vector3.Cross (HitNormal, _Vperp) * Mathf.Sign (HitNormal.y);
+					//Debug.Log (UpDir);
+					collider.transform.GetComponent<Rigidbody> ().AddForce (HitNormal * Force, ForceMode.Impulse);
+				}
+
+
+				/*if (transform.rotation.eulerAngles.x >= 0f && transform.rotation.eulerAngles.x <= 45f && transform.rotation.eulerAngles.z >= 0f && transform.rotation.eulerAngles.z <= 45f) {
+					Debug.Log ("caca");
+					RaycastHit _hit;
+					Ray _R = new Ray(collider.transform.position, -transform.up);
+					Vector3 HitNormal = _hit.normal;
+					
+					Vector3 _Vperp = Vector3.Cross(HitNormal, new Vector3(HitNormal.x, 0, HitNormal.z));
+					Vector3 UpDir = Vector3.Cross(HitNormal, Vperp) *  Mathf.Sign(HitNormal.y);
+					collider.transform.GetComponent<Rigidbody> ().AddForce (this.transform.up * Force, ForceMode.Impulse);
+				}
+				if (transform.rotation.eulerAngles.x >= 315f && transform.rotation.eulerAngles.x <= 360f && transform.rotation.eulerAngles.z >= 315f && transform.rotation.eulerAngles.z <= 360f) {
+					Debug.Log ("cacabis");
+					collider.transform.GetComponent<Rigidbody> ().AddForce (this.transform.up * Force, ForceMode.Impulse);
+				}
+				if (transform.rotation.eulerAngles.x > 135f && transform.rotation.eulerAngles.x < 225f && transform.rotation.eulerAngles.z > 135f && transform.rotation.eulerAngles.z < 225f) {
+					Debug.Log ("caca2");
+					collider.transform.GetComponent<Rigidbody> ().AddForce (this.transform.up * -Force, ForceMode.Impulse);
+				}*/
+			}
+		}
+	}
 }

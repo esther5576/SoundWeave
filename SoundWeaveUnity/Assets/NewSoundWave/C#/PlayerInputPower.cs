@@ -23,8 +23,13 @@ public class PlayerInputPower : MonoBehaviour
 			//HEIGHT Power
 			if (Input.GetKey (KeyCode.Joystick1Button4)) {
 				other.GetComponent<CubeModifications> ().GrowHeightFunctionActive = true;
+				other.GetComponent<Renderer> ().material.color = new Color (0.37f, 0.94f, 0.6f);
 			} else {
 				other.GetComponent<CubeModifications> ().GrowHeightFunctionActive = false;
+			}
+
+			if (Input.GetKeyUp (KeyCode.Joystick1Button4)) {
+				other.GetComponent<Renderer> ().material.color = new Color (0.71f, 0.71f, 0.71f);
 			}
 			#endregion
 
@@ -32,16 +37,26 @@ public class PlayerInputPower : MonoBehaviour
 			//GROW Power
 			if (Input.GetKey (KeyCode.Joystick1Button5)) {
 				other.GetComponent<CubeModifications> ().GrowFunctionActive = true;
+				other.GetComponent<Renderer> ().material.color = new Color (0.37f, 0.6f, 0.94f);
 			} else {
 				other.GetComponent<CubeModifications> ().GrowFunctionActive = false;
 			}
+
+			if (Input.GetKeyUp (KeyCode.Joystick1Button5)) {
+				other.GetComponent<Renderer> ().material.color = new Color (0.71f, 0.71f, 0.71f);
+			}
 			#endregion
+
+			if (Input.GetKey (KeyCode.Joystick1Button4) && Input.GetKey (KeyCode.Joystick1Button5)) {
+				other.GetComponent<Renderer> ().material.color = new Color (0.37f, 0.77f, 0.77f);
+			}
 
 			#region Push power
 			//PUSH Power
 			if (Input.GetAxis ("360_Triggers") < -0.9) {
 				other.GetComponent<Rigidbody> ().isKinematic = false;
 				other.GetComponent<Rigidbody> ().AddForce (Camera.main.transform.forward * Force, ForceMode.Impulse);
+				other.GetComponent<Renderer> ().material.color = new Color (0.94f, 0.88f, 0.5f);
 			}
 			#endregion
 
@@ -51,6 +66,7 @@ public class PlayerInputPower : MonoBehaviour
 
 				other.GetComponent<Rigidbody> ().isKinematic = false;
 				other.GetComponent<CubeModifications> ().divisionOfCubesActive = true;
+				other.GetComponent<Renderer> ().material.color = new Color (0.94f, 0.37f, 0.6f);
 
 				Timer += Time.deltaTime;
 				if (Timer >= TotalTime) {
@@ -71,6 +87,7 @@ public class PlayerInputPower : MonoBehaviour
 		if (other.tag == "cube") {
 			other.GetComponent<CubeModifications> ().GrowHeightFunctionActive = false;
 			other.GetComponent<CubeModifications> ().GrowFunctionActive = false;
+			other.GetComponent<Renderer> ().material.color = new Color (0.71f, 0.71f, 0.71f);
 		}
 	}
 }

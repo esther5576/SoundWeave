@@ -126,6 +126,7 @@
      <None Include="Assets\OldWork\other\Spektr\Scatter\Shaders\Destruction.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
      <None Include="Assets\OldWork\other\ColorSuite\Shader\ColorSuite.shader" />
+     <None Include="Assets\NewSoundWave\Shader\Internal-DeferredShading.shader" />
      <None Include="Assets\OldWork\other\TextAnimation\ClassicNoise3D.cginc" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
@@ -153,6 +154,7 @@
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\CameraMotionBlur.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
+     <None Include="Assets\NewSoundWave\Shader\Internal-PrePassLighting.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
      <None Include="Assets\OldWork\other\Kino\Vignette\Shader\Vignette.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />

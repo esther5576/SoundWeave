@@ -149,6 +149,12 @@ public class PlayerInput : MonoBehaviour
 
 			}
 		}
+
+		if (Input.GetKey (KeyCode.JoystickButton1)) {
+			Debug.Log ("caca");
+			//this.GetComponent<Rigidbody> ().velocity += jumpForce * Vector3.up;
+			this.GetComponent<Rigidbody> ().AddForce (Vector3.up * 10, ForceMode.Acceleration);
+		}
 	}
 	#endregion
 
