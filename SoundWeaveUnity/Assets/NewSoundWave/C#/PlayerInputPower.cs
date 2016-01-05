@@ -21,33 +21,33 @@ public class PlayerInputPower : MonoBehaviour
 
 			#region Height power
 			//HEIGHT Power
-			if (Input.GetKey (KeyCode.Joystick1Button4)) {
+			if (Input.GetKey (KeyCode.Joystick1Button2)) {
 				other.GetComponent<CubeModifications> ().GrowHeightFunctionActive = true;
 				other.GetComponent<Renderer> ().material.color = new Color (0.37f, 0.94f, 0.6f);
 			} else {
 				other.GetComponent<CubeModifications> ().GrowHeightFunctionActive = false;
 			}
 
-			if (Input.GetKeyUp (KeyCode.Joystick1Button4)) {
+			if (Input.GetKeyUp (KeyCode.Joystick1Button2)) {
 				other.GetComponent<Renderer> ().material.color = new Color (0.71f, 0.71f, 0.71f);
 			}
 			#endregion
 
 			#region Grow power
 			//GROW Power
-			if (Input.GetKey (KeyCode.Joystick1Button5)) {
+			if (Input.GetKey (KeyCode.Joystick1Button1)) {
 				other.GetComponent<CubeModifications> ().GrowFunctionActive = true;
 				other.GetComponent<Renderer> ().material.color = new Color (0.37f, 0.6f, 0.94f);
 			} else {
 				other.GetComponent<CubeModifications> ().GrowFunctionActive = false;
 			}
 
-			if (Input.GetKeyUp (KeyCode.Joystick1Button5)) {
+			if (Input.GetKeyUp (KeyCode.Joystick1Button1)) {
 				other.GetComponent<Renderer> ().material.color = new Color (0.71f, 0.71f, 0.71f);
 			}
 			#endregion
 
-			if (Input.GetKey (KeyCode.Joystick1Button4) && Input.GetKey (KeyCode.Joystick1Button5)) {
+			if (Input.GetKey (KeyCode.Joystick1Button2) && Input.GetKey (KeyCode.Joystick1Button1)) {
 				other.GetComponent<Renderer> ().material.color = new Color (0.37f, 0.77f, 0.77f);
 			}
 

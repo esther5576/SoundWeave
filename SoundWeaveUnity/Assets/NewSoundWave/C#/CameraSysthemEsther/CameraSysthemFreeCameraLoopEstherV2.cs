@@ -14,18 +14,18 @@ public class CameraSysthemFreeCameraLoopEstherV2 : CameraSysthemPivotEstherV2
 	[SerializeField]
 	private float
 		turnsmoothing = 0.1f;
-	[SerializeField]
-	private float
+	//[SerializeField]
+	public float
 		tiltMax = 75f;
-	[SerializeField]
-	private float
+	//[SerializeField]
+	public float
 		tiltMin = 45f;
-	[SerializeField]
+	//[SerializeField]
 	private bool
 		lockCursor = false;
 
 	private float lookAngle;
-	private float tiltAngle;
+	public float tiltAngle;
 
 	private const float LookDistance = 100f;
 

@@ -9,6 +9,7 @@ public class Glide : MonoBehaviour
 	public float GlideSpeed = 15f;
 	private float characterMoveSpeed;
 	private float jumpFallSpeed;
+	public float gravityChanger = 1.5f;
 	// Use this for initialization
 	void Awake ()
 	{
@@ -21,12 +22,14 @@ public class Glide : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		if (!jumpScript._Grounded) {
-			if (Input.GetKey (KeyCode.JoystickButton0)) {
+		if (!jumpScript._Grounded && this.transform.parent.GetComponent<Rigidbody> ().velocity.y <= 0) {
+			if (Input.GetKey (KeyCode.JoystickButton0) || Input.GetKey (KeyCode.JoystickButton4)) {
+				//Debug.Log (this.transform.parent.GetComponent<Rigidbody> ().velocity.y);
 				jumpScript._FallSpeed = GlideForce;
 				characterMoveScript._Speed = GlideSpeed;
+				this.transform.parent.GetComponent<Rigidbody> ().AddForce (- Physics.gravity * gravityChanger);
 			}
-			if (Input.GetKeyUp (KeyCode.JoystickButton0)) {
+			if (Input.GetKeyUp (KeyCode.JoystickButton0) || Input.GetKeyUp (KeyCode.JoystickButton4)) {
 				jumpScript._FallSpeed = jumpFallSpeed;
 				characterMoveScript._Speed = characterMoveSpeed;
 			}

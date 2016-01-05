@@ -51,7 +51,7 @@ public class FootCollider : MonoBehaviour
 
 	}
 
-	void OnTriggerEnter (Collider _Coll)
+	void OnTriggerStay (Collider _Coll)
 	{
 		if (_Coll.tag != "Player") {
 			_JumpScript._Grounded = true;

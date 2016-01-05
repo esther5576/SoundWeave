@@ -30,19 +30,19 @@ public class Jump : MonoBehaviour
 	{
 		if (!_Grounded) {
 			Fall ();
-		} else if (Input.GetKeyDown (KeyCode.JoystickButton0)) {
+		} else if (Input.GetKeyDown (KeyCode.JoystickButton0) || Input.GetKeyDown (KeyCode.JoystickButton4)) {
 			Debug.Log ("jump");
 			_IsJumping = true;
 			_CurrentJumpPower = _JumpPower;
 		}
 
-		if (Input.GetKey (KeyCode.JoystickButton0)) {
+		if (Input.GetKey (KeyCode.JoystickButton0) || Input.GetKey (KeyCode.JoystickButton4)) {
 			if (_CurrentJumpPower > 0) {
 				_CurrentJumpPower -= _JumpDegradation;
 			}
 		}
 
-		if (Input.GetKeyUp (KeyCode.JoystickButton0)) {
+		if (Input.GetKeyUp (KeyCode.JoystickButton0) || Input.GetKeyUp (KeyCode.JoystickButton4)) {
 			_IsJumping = false;
 		}
 	}
