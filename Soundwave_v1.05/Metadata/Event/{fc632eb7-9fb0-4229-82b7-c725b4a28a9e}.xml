@@ -5,7 +5,7 @@
             <value>avatar</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixer">
             <destination>{8ed56933-b3fe-4580-9210-df5724154063}</destination>
@@ -279,7 +279,7 @@
     <object class="SpatialiserEffect" id="{de8c90eb-20e9-4075-a0d9-8ea3ddf9c30b}"/>
     <object class="MixerSend" id="{0a7717f4-56d8-4052-ba22-c9f7f22a31c7}">
         <property name="inputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixerReturn">
             <destination>{d3f9f9a3-892e-41ee-8149-fa583e09aeb5}</destination>

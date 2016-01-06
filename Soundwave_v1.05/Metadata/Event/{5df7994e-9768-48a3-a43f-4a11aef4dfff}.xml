@@ -5,7 +5,7 @@
             <value>enlarge</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixer">
             <destination>{973a1a63-c852-44ab-a198-c87176613b88}</destination>
@@ -258,7 +258,7 @@
     <object class="SpatialiserEffect" id="{901ea20d-a30e-4633-9d03-261249b855af}"/>
     <object class="MixerSend" id="{147777f2-85b6-46bd-b530-7c3190373066}">
         <property name="inputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixerReturn">
             <destination>{d3f9f9a3-892e-41ee-8149-fa583e09aeb5}</destination>
@@ -316,7 +316,6 @@
         <property name="name">
             <value>FFT size</value>
         </property>
-        <property name="units"/>
         <property name="curve">
             <value>LinearPiecewiseCurveStrategy{(7.186666,256.000000)(8.000000,500.000000)(9.000000,1000.000000)(10.000000,2000.000000)(10.698667,4096.000000)}</value>
         </property>
@@ -331,7 +330,6 @@
         <property name="name">
             <value>Overlap</value>
         </property>
-        <property name="units"/>
         <property name="curve">
             <value>LinearPiecewiseCurveStrategy{(0.000000,1.000000)(1.000000,2.000000)(2.000000,5.000000)(3.000000,10.000000)(4.000000,20.000000)(4.400000,32.000000)}</value>
         </property>

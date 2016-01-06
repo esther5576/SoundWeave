@@ -5,7 +5,7 @@
             <value>split</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixer">
             <destination>{9b43a9e0-fb75-444b-b283-79a2a0aa0a96}</destination>
@@ -137,7 +137,7 @@
             <value>-66</value>
         </property>
         <property name="inputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixerReturn">
             <destination>{d3f9f9a3-892e-41ee-8149-fa583e09aeb5}</destination>

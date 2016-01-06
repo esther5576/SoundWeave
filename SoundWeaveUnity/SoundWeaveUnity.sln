@@ -5,6 +5,8 @@ Project("{6B0A91B4-9A21-EED5-792E-DD2909BBF2BE}") = "SoundWeaveUnity", "Assembly
 EndProject
 Project("{6B0A91B4-9A21-EED5-792E-DD2909BBF2BE}") = "SoundWeaveUnity", "Assembly-CSharp.csproj", "{7C214BF9-DCD9-4CA7-121E-1B9FC7F59250}"
 EndProject
+Project("{6B0A91B4-9A21-EED5-792E-DD2909BBF2BE}") = "SoundWeaveUnity", "Assembly-CSharp-Editor-firstpass.csproj", "{F08E1AE6-C542-96CF-031B-5CAA7BFE4919}"
+EndProject
 Project("{6B0A91B4-9A21-EED5-792E-DD2909BBF2BE}") = "SoundWeaveUnity", "Assembly-CSharp-Editor.csproj", "{2E5159DD-7B9D-C1A9-DDE5-EA8C340C3A1A}"
 EndProject
 Project("{6B0A91B4-9A21-EED5-792E-DD2909BBF2BE}") = "SoundWeaveUnity", "Assembly-UnityScript.unityproj", "{31971986-F159-3438-DABE-14587DD06D30}"
@@ -23,6 +25,10 @@ Global
 		{7C214BF9-DCD9-4CA7-121E-1B9FC7F59250}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C214BF9-DCD9-4CA7-121E-1B9FC7F59250}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C214BF9-DCD9-4CA7-121E-1B9FC7F59250}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F08E1AE6-C542-96CF-031B-5CAA7BFE4919}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F08E1AE6-C542-96CF-031B-5CAA7BFE4919}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F08E1AE6-C542-96CF-031B-5CAA7BFE4919}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F08E1AE6-C542-96CF-031B-5CAA7BFE4919}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2E5159DD-7B9D-C1A9-DDE5-EA8C340C3A1A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2E5159DD-7B9D-C1A9-DDE5-EA8C340C3A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E5159DD-7B9D-C1A9-DDE5-EA8C340C3A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -54,5 +60,4 @@ Global
 		$3.inheritsScope = text/plain
 		$3.scope = text/plain
 	EndGlobalSection
-
 EndGlobal

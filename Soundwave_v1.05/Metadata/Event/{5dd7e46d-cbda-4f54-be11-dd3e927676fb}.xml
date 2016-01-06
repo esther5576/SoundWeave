@@ -5,7 +5,7 @@
             <value>land</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixer">
             <destination>{b7ad4394-1b7c-4260-940e-c6832a37123c}</destination>
@@ -187,7 +187,7 @@
     <object class="SpatialiserEffect" id="{7f15b9b0-6ecc-4cb1-8442-3c468205748c}"/>
     <object class="MixerSend" id="{8122c426-ef09-4c67-a231-7cadf467e0f1}">
         <property name="inputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixerReturn">
             <destination>{d3f9f9a3-892e-41ee-8149-fa583e09aeb5}</destination>

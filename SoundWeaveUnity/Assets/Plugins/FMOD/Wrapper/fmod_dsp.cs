@@ -1,9 +1,9 @@
 /*$ preserve start $*/
 /* ========================================================================================== */
-/* FMOD Studio - DSP header file. Copyright (c), Firelight Technologies Pty, Ltd. 2004-2015.  */
+/* FMOD Studio - DSP header file. Copyright (c), Firelight Technologies Pty, Ltd. 2004-2015.      */
 /*                                                                                            */
 /* Use this header if you are interested in delving deeper into the FMOD software mixing /    */
-/* DSP engine.  In this header you can find parameter structures for FMOD system registered   */
+/* DSP engine.  In this header you can find parameter structures for FMOD system reigstered   */
 /* DSP effects and generators.                                                                */
 /*                                                                                            */
 /* ========================================================================================== */
@@ -35,7 +35,7 @@ namespace FMOD
     {
         public int              numbuffers;              /* [r/w] number of buffers */
         public int[]            buffernumchannels;       /* [r/w] array of number of channels for each buffer */
-        public uint[]           bufferchannelmask;       /* [r/w] array of channel masks for each buffer. IL2CPP workaround - real type is CHANNELMASK[] */
+        public CHANNELMASK[]    bufferchannelmask;       /* [r/w] array of channel masks for each buffer. */
         public IntPtr[]         buffers;                 /* [r/w] array of buffers */
         public SPEAKERMODE      speakermode;             /* [r/w] speaker mode for all buffers in the array */
     }
@@ -123,6 +123,7 @@ namespace FMOD
 
     public delegate RESULT DSP_SYSTEM_GETSAMPLERATE             (ref DSP_STATE dsp_state, ref int rate);
     public delegate RESULT DSP_SYSTEM_GETBLOCKSIZE              (ref DSP_STATE dsp_state, ref uint blocksize);
+    public delegate RESULT DSP_SYSTEM_GETSPEAKERMODE            (ref DSP_STATE dsp_state, ref int speakermode_mixer, ref int speakermode_output);
 
 
     public delegate RESULT DSP_DFT_FFTREAL                      (ref DSP_STATE dsp_state, int size, IntPtr signal, IntPtr dft, IntPtr window, int signalhop);
@@ -148,7 +149,7 @@ namespace FMOD
         System::createDSPByType
     ]
     */
-    public enum DSP_TYPE :int
+    public enum DSP_TYPE : int
     {
         UNKNOWN,            /* This unit was created via a non FMOD plugin so has an unknown purpose. */
         MIXER,              /* This unit does nothing but take inputs and mix them together then feed the result to the soundcard unit. */
@@ -184,6 +185,7 @@ namespace FMOD
         ENVELOPEFOLLOWER,   /* This unit tracks the envelope of the input/sidechain signal */
         CONVOLUTIONREVERB,  /* This unit implements convolution reverb. */
         CHANNELMIX,         /* This unit provides per signal channel gain, and output channel mapping to allow 1 multichannel signal made up of many groups of signals to map to a single output signal. */
+        TRANSCEIVER,        /* This unit 'sends' and 'receives' from a selection of up to 32 different slots.  It is like a send/return but it uses global slots rather than returns as the destination.  It also has other features.  Multiple transceivers can receive from a single channel, or multiple transceivers can send to a single channel, or a combination of both. */
     }
 
 
@@ -750,6 +752,7 @@ namespace FMOD
         DSP_SYSTEM_GETBLOCKSIZE            getblocksize;   /* [r] Callback for getting the system's block size.  DSPs will be requested to process blocks of varying length up to this size.*/
         IntPtr                             dft;            /* [r] Struct containing callbacks for performing FFTs and inverse FFTs. */
         IntPtr                             pancallbacks;   /* [r] Pointer to a structure of callbacks for calculating pan, up-mix and down-mix matrices. */
+        DSP_SYSTEM_GETSPEAKERMODE          getspeakermode; /* [r] Callback for getting the system's speaker modes.  One is the mixer's default speaker mode, the other is the output mode the system is downmixing or upmixing to.*/
     }
 
     /*
@@ -1776,6 +1779,74 @@ namespace FMOD
         GAIN_CH31           /* (Type:float) - Channel #31 gain in dB.  -80.0 to 10.0.  Default = 0. */
     }
 
+    /*
+    [ENUM]
+    [
+        [DESCRIPTION]
+        Parameter types for the FMOD_DSP_TRANSCEIVER_SPEAKERMODE parameter for FMOD_DSP_TYPE_TRANSCEIVER effect.
+
+        [REMARKS]
+        The speaker mode of a transceiver buffer (of which there are up to 32 of) is determined automatically depending on the signal flowing through the transceiver effect, or it can be forced.
+        Use a smaller fixed speaker mode buffer to save memory.
+
+        Only relevant for transmitter dsps, as they control the format of the transceiver channel's buffer.
+
+        If multiple transceivers transmit to a single buffer in different speaker modes, it will allocate memory for each speaker mode.   This uses more memory than a single speaker mode.
+        If there are multiple receivers reading from a channel with multiple speaker modes, it will read them all and mix them together.
+
+        If the system's speaker mode is stereo or mono, it will not create a 3rd buffer, it will just use the mono/stereo speaker mode buffer.
+
+        [SEE_ALSO]
+        DSP::setParameterInt
+        DSP::getParameterInt
+        FMOD_DSP_TYPE
+    ]
+    */
+    public enum DSP_TRANSCEIVER_SPEAKERMODE
+    {
+        AUTO = -1,     /* A transmitter will use whatever signal channel count coming in to the transmitter, to determine which speaker mode is allocated for the transceiver channel. */
+        MONO = 0,      /* A transmitter will always downmix to a mono channel buffer. */
+        STEREO,        /* A transmitter will always upmix or downmix to a stereo channel buffer. */
+        SURROUND,      /* A transmitter will always upmix or downmix to a surround channel buffer.   Surround is the speaker mode of the system above stereo, so could be quad/surround/5.1/7.1. */
+    }
+
+
+    /*
+    [ENUM]
+    [
+        [DESCRIPTION]
+        Parameter types for the FMOD_DSP_TYPE_TRANSCEIVER filter.
+
+        [REMARKS]
+        The transceiver only transmits and receives to a global array of 32 channels.   The transceiver can be set to receiver mode (like a return) and can receive the signal at a variable gain (FMOD_DSP_TRANSCEIVER_GAIN).
+        The transceiver can also be set to transmit to a chnnel (like a send) and can transmit the signal with a variable gain (FMOD_DSP_TRANSCEIVER_GAIN).
+    
+        The FMOD_DSP_TRANSCEIVER_TRANSMITSPEAKERMODE is only applicable to the transmission format, not the receive format.   This means this parameter is ignored in 'receive mode'.  This allows receivers to receive at
+        the speaker mode of the user's choice.   Receiving from a mono channel, is cheaper than receiving from a surround channel for example.
+        The 3 speaker modes FMOD_DSP_TRANSCEIVER_SPEAKERMODE_MONO, FMOD_DSP_TRANSCEIVER_SPEAKERMODE_STEREO, FMOD_DSP_TRANSCEIVER_SPEAKERMODE_SURROUND are stored as seperate buffers in memory for a tranmitter channel.
+        To save memory, use 1 common speaker mode for a transmitter.
+
+        The transceiver is double buffered to avoid desyncing of transmitters and receivers.   This means there will be a 1 block delay on a receiver, compared to the data sent from a transmitter.
+
+        Multiple transmitters sending to the same channel will be mixed together.
+
+        [SEE_ALSO]
+        DSP::setParameterFloat
+        DSP::getParameterFloat
+        DSP::setParameterInt
+        DSP::getParameterInt
+        DSP::setParameterBool
+        DSP::getParameterBool
+        FMOD_DSP_TYPE
+    ]
+    */
+    public enum DSP_TRANSCEIVER
+    {
+        TRANSMIT,            /* (Type:bool)  - [r/w] - FALSE = Transceiver is a 'receiver' (like a return) and accepts data from a channel.  TRUE = Transceiver is a 'transmitter' (like a send).  Default = FALSE. */
+        GAIN,                /* (Type:float) - [r/w] - Gain to receive or transmit at in dB.  -80.0 to 10.0.  Default = 0. */
+        CHANNEL,             /* (Type:int)   - [r/w] - Integer to select current global slot, shared by all Transceivers, that can be transmitted to or received from.  0 to 31.  Default = 0.*/
+        TRANSMITSPEAKERMODE  /* (Type:int)   - [r/w] - Speaker mode (transmitter mode only).  Specifies either 0 (Auto) Default = 0.*/
+    }
 
 /*$ preserve start $*/
 }

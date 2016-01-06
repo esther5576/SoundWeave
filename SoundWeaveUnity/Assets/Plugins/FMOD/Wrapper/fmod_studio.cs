@@ -18,7 +18,7 @@ namespace Studio
         public const string dll    = "__Internal";
 #elif (UNITY_PS4 || UNITY_WIIU || UNITY_PSP2) && !UNITY_EDITOR
 		public const string dll    = "libfmodstudio";
-#elif (UNITY_EDITOR || UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX) && FMOD_DEBUG
+#elif UNITY_EDITOR || ((UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX) && DEVELOPMENT_BUILD)
         public const string dll    = "fmodstudiol";
 #else
 		public const string dll    = "fmodstudio";
@@ -38,15 +38,6 @@ namespace Studio
         LOADING,          /* Loading in progress. */
         LOADED,           /* Loaded and ready to play. */
         ERROR,            /* Failed to load and is now in error state. */
-    }
-
-    [StructLayout(LayoutKind.Sequential)]
-    public struct ATTRIBUTES_3D
-    {
-        public VECTOR position;
-        public VECTOR velocity;
-        public VECTOR forward;
-        public VECTOR up;
     }
 
     [StructLayout(LayoutKind.Sequential)]
@@ -826,7 +817,12 @@ namespace Studio
             bank = null;
 
             IntPtr newPtr = new IntPtr();
-            RESULT result = FMOD_Studio_System_LoadBankMemory(rawPtr, buffer, buffer.Length, LOAD_MEMORY_MODE.LOAD_MEMORY, flags, out newPtr);
+
+            // Manually pin the byte array. It's what the marshaller should do anyway but don't leave it to chance.
+            GCHandle pinnedArray = GCHandle.Alloc(buffer, GCHandleType.Pinned);
+            IntPtr pointer = pinnedArray.AddrOfPinnedObject();
+            RESULT result = FMOD_Studio_System_LoadBankMemory(rawPtr, pointer, buffer.Length, LOAD_MEMORY_MODE.LOAD_MEMORY, flags, out newPtr);
+            pinnedArray.Free();
             if (result != RESULT.OK)
             {
                 return result;
@@ -995,7 +991,7 @@ namespace Studio
         [DllImport (STUDIO_VERSION.dll)]
         private static extern RESULT FMOD_Studio_System_LoadBankFile            (IntPtr studiosystem, byte[] filename, LOAD_BANK_FLAGS flags, out IntPtr bank);
         [DllImport (STUDIO_VERSION.dll)]
-        private static extern RESULT FMOD_Studio_System_LoadBankMemory          (IntPtr studiosystem, byte[] buffer, int length, LOAD_MEMORY_MODE mode, LOAD_BANK_FLAGS flags, out IntPtr bank);
+        private static extern RESULT FMOD_Studio_System_LoadBankMemory(IntPtr studiosystem, IntPtr buffer, int length, LOAD_MEMORY_MODE mode, LOAD_BANK_FLAGS flags, out IntPtr bank);
         [DllImport (STUDIO_VERSION.dll)]
         private static extern RESULT FMOD_Studio_System_LoadBankCustom          (IntPtr studiosystem, ref BANK_INFO info, LOAD_BANK_FLAGS flags, out IntPtr bank);
         [DllImport (STUDIO_VERSION.dll)]

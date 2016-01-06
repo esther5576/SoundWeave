@@ -5,7 +5,7 @@
             <value>New Event</value>
         </property>
         <property name="outputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixer">
             <destination>{61365565-def2-4ed1-bca0-d0007824090b}</destination>
@@ -333,7 +333,7 @@
     <object class="SpatialiserEffect" id="{81c7e718-a225-4040-838f-0ffc542a6d64}"/>
     <object class="MixerSend" id="{06d46ddb-abaa-46ee-a249-2cf40df68e45}">
         <property name="inputFormat">
-            <value>2</value>
+            <value>1</value>
         </property>
         <relationship name="mixerReturn">
             <destination>{d3f9f9a3-892e-41ee-8149-fa583e09aeb5}</destination>
