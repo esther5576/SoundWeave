@@ -7,6 +7,8 @@ Project("{6B0A91B4-9A21-EED5-792E-DD2909BBF2BE}") = "SoundWeaveUnity", "Assembly
 EndProject
 Project("{6B0A91B4-9A21-EED5-792E-DD2909BBF2BE}") = "SoundWeaveUnity", "Assembly-CSharp-Editor.csproj", "{2E5159DD-7B9D-C1A9-DDE5-EA8C340C3A1A}"
 EndProject
+Project("{6B0A91B4-9A21-EED5-792E-DD2909BBF2BE}") = "SoundWeaveUnity", "Assembly-UnityScript.unityproj", "{31971986-F159-3438-DABE-14587DD06D30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,11 +27,15 @@ Global
 		{2E5159DD-7B9D-C1A9-DDE5-EA8C340C3A1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E5159DD-7B9D-C1A9-DDE5-EA8C340C3A1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E5159DD-7B9D-C1A9-DDE5-EA8C340C3A1A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31971986-F159-3438-DABE-14587DD06D30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31971986-F159-3438-DABE-14587DD06D30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31971986-F159-3438-DABE-14587DD06D30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31971986-F159-3438-DABE-14587DD06D30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																																																																																																																														GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																																																																			GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1

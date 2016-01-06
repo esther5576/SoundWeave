@@ -23,13 +23,13 @@ public class PlayerInputPower : MonoBehaviour
 			//HEIGHT Power
 			if (Input.GetKey (KeyCode.Joystick1Button0)) {
 				other.GetComponent<CubeModifications> ().GrowHeightFunctionActive = true;
-				other.GetComponent<Renderer> ().material.color = new Color (0.37f, 0.94f, 0.6f);
+				other.GetComponent<Renderer> ().material.color = new Color (0.709f, 0.792f, 0.627f);
 			} else {
 				other.GetComponent<CubeModifications> ().GrowHeightFunctionActive = false;
 			}
 
 			if (Input.GetKeyUp (KeyCode.Joystick1Button0)) {
-				other.GetComponent<Renderer> ().material.color = new Color (0.71f, 0.71f, 0.71f);
+				other.GetComponent<Renderer> ().material.color = new Color (0.9f, 0.9f, 0.9f);
 			}
 			#endregion
 
@@ -37,18 +37,18 @@ public class PlayerInputPower : MonoBehaviour
 			//GROW Power
 			if (Input.GetKey (KeyCode.Joystick1Button2)) {
 				other.GetComponent<CubeModifications> ().GrowFunctionActive = true;
-				other.GetComponent<Renderer> ().material.color = new Color (0.37f, 0.6f, 0.94f);
+				other.GetComponent<Renderer> ().material.color = new Color (0.647f, 0.870f, 0.894f);
 			} else {
 				other.GetComponent<CubeModifications> ().GrowFunctionActive = false;
 			}
 
 			if (Input.GetKeyUp (KeyCode.Joystick1Button2)) {
-				other.GetComponent<Renderer> ().material.color = new Color (0.71f, 0.71f, 0.71f);
+				other.GetComponent<Renderer> ().material.color = new Color (0.9f, 0.9f, 0.9f);
 			}
 			#endregion
 
 			if (Input.GetKey (KeyCode.Joystick1Button2) && Input.GetKey (KeyCode.Joystick1Button0)) {
-				other.GetComponent<Renderer> ().material.color = new Color (0.37f, 0.77f, 0.77f);
+				other.GetComponent<Renderer> ().material.color = new Color (0.400f, 0.729f, 0.717f);
 			}
 
 			#region Push power
@@ -56,7 +56,7 @@ public class PlayerInputPower : MonoBehaviour
 			if (Input.GetAxis ("360_Triggers") < -0.9) {
 				other.GetComponent<Rigidbody> ().isKinematic = false;
 				other.GetComponent<Rigidbody> ().AddForce (Camera.main.transform.forward * Force, ForceMode.Impulse);
-				other.GetComponent<Renderer> ().material.color = new Color (0.94f, 0.88f, 0.5f);
+				other.GetComponent<Renderer> ().material.color = new Color (0.980f, 0.839f, 0.537f);
 			}
 			#endregion
 
@@ -66,7 +66,7 @@ public class PlayerInputPower : MonoBehaviour
 
 				other.GetComponent<Rigidbody> ().isKinematic = false;
 				other.GetComponent<CubeModifications> ().divisionOfCubesActive = true;
-				other.GetComponent<Renderer> ().material.color = new Color (0.94f, 0.37f, 0.6f);
+				other.GetComponent<Renderer> ().material.color = new Color (0.956f, 0.654f, 0.725f);
 
 				Timer += Time.deltaTime;
 				if (Timer >= TotalTime) {
@@ -87,7 +87,7 @@ public class PlayerInputPower : MonoBehaviour
 		if (other.tag == "cube") {
 			other.GetComponent<CubeModifications> ().GrowHeightFunctionActive = false;
 			other.GetComponent<CubeModifications> ().GrowFunctionActive = false;
-			other.GetComponent<Renderer> ().material.color = new Color (0.71f, 0.71f, 0.71f);
+			other.GetComponent<Renderer> ().material.color = new Color (0.9f, 0.9f, 0.9f);
 		}
 	}
 }

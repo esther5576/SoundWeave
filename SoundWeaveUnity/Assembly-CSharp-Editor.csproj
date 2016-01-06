@@ -142,6 +142,7 @@
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\DLAA.shader" />
      <None Include="Assets\NewSoundWave\Shader\Internal-PrePassLighting.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\NoiseAndGrainDX11.shader" />
+     <None Include="Assets\NewSoundWave\Shader\BlendModesOverlay.shader" />
      <None Include="Assets\OldWork\other\Kino\Vignette\Shader\Vignette.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\BrightPassFilter2.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\SeparableBlur.shader" />
@@ -238,6 +239,8 @@
       <Project>{AEE20071-4CBC-FA3B-488A-E4178D9461D1}</Project>      <Name>Assembly-CSharp-firstpass</Name>    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{7C214BF9-DCD9-4CA7-121E-1B9FC7F59250}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript.unityproj">
+      <Project>{31971986-F159-3438-DABE-14587DD06D30}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
