@@ -56,6 +56,7 @@
      <Compile Include="Assets\NewSoundWave\C#\NewPlayerController\Jump.cs" />
      <Compile Include="Assets\NewSoundWave\C#\PlayerInput.cs" />
      <Compile Include="Assets\NewSoundWave\C#\PlayerInputPower.cs" />
+     <Compile Include="Assets\NewSoundWave\C#\PowerMusic.cs" />
      <Compile Include="Assets\NewSoundWave\C#\SoundWaveMusic.cs" />
      <Compile Include="Assets\OldWork\Scripts\ActualC#ScriptsUsed\CubeCameraOcclusion.cs" />
      <Compile Include="Assets\OldWork\Scripts\ActualC#ScriptsUsed\CubePowers.cs" />

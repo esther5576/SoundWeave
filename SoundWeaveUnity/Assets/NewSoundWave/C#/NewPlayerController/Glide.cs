@@ -23,13 +23,13 @@ public class Glide : MonoBehaviour
 	void Update ()
 	{
 		if (!jumpScript._Grounded && this.transform.parent.GetComponent<Rigidbody> ().velocity.y <= 0) {
-			if (/*Input.GetKey (KeyCode.JoystickButton0) ||*/ Input.GetKey (KeyCode.JoystickButton4)) {
+			if (Input.GetKey (KeyCode.JoystickButton5) || Input.GetKey (KeyCode.JoystickButton4)) {
 				//Debug.Log (this.transform.parent.GetComponent<Rigidbody> ().velocity.y);
 				jumpScript._FallSpeed = GlideForce;
 				characterMoveScript._Speed = GlideSpeed;
-				this.transform.parent.GetComponent<Rigidbody> ().AddForce (- Physics.gravity * gravityChanger);
+				this.transform.parent.GetComponent<Rigidbody> ().AddForce (-Physics.gravity * gravityChanger);
 			}
-			if (/*Input.GetKeyUp (KeyCode.JoystickButton0) ||*/ Input.GetKeyUp (KeyCode.JoystickButton4)) {
+			if (Input.GetKeyUp (KeyCode.JoystickButton5) || Input.GetKeyUp (KeyCode.JoystickButton4)) {
 				jumpScript._FallSpeed = jumpFallSpeed;
 				characterMoveScript._Speed = characterMoveSpeed;
 			}
