@@ -142,7 +142,7 @@ public class PlayerInput : MonoBehaviour
 			if (grounded) {
 				this.GetComponent<Rigidbody> ().velocity += jumpForce * Vector3.up;
 				candoubleJump = true;
-				FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/jump", transform.localPosition);
+				//FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/jump", transform.localPosition);
 			} else if (candoubleJump) {
 				candoubleJump = false;
 				this.GetComponent<Rigidbody> ().velocity += jumpForce * Vector3.up;
@@ -185,7 +185,7 @@ public class PlayerInput : MonoBehaviour
 					count ++;
 
 					if (count <= 1) {
-						FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/land", transform.localPosition);
+						//FMODUnity.RuntimeManager.PlayOneShot ("event:/feedbacks/land", transform.localPosition);
 					}
 
 					this.GetComponent<Rigidbody> ().useGravity = false; 
