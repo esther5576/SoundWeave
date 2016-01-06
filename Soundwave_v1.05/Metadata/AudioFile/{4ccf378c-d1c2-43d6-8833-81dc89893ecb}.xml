@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="AudioFile" id="{4ccf378c-d1c2-43d6-8833-81dc89893ecb}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>0.35680272108843536</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/robot1 {dd5477ae-cca4-41d7-87ef-97aab9164c22}.wav</value>
+        </property>
+        <relationship name="container">
+            <destination>{b1565409-34ad-479d-ba1a-2423faf5239a}</destination>
+        </relationship>
+    </object>
+</objects>

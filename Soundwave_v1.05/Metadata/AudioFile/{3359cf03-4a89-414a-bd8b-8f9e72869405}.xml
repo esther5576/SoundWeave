@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="AudioFile" id="{3359cf03-4a89-414a-bd8b-8f9e72869405}">
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>40.673514739229027</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/boucle vent {045ea4d2-be67-46b2-86c4-91ece40bf0c1}.wav</value>
+        </property>
+        <relationship name="container">
+            <destination>{b1565409-34ad-479d-ba1a-2423faf5239a}</destination>
+        </relationship>
+    </object>
+</objects>

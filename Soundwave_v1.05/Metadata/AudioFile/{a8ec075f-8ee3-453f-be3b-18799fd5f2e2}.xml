@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="AudioFile" id="{a8ec075f-8ee3-453f-be3b-18799fd5f2e2}">
+        <property name="frequencyInKHz">
+            <value>48</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>8</value>
+        </property>
+        <property name="audioFilePath">
+            <value>$(AUDIO_BIN_DIR)/2 Song 1 ElectroSynth {c570cff1-26c4-42e6-8cc4-c4a42f82c657}.wav</value>
+        </property>
+        <relationship name="container">
+            <destination>{b1565409-34ad-479d-ba1a-2423faf5239a}</destination>
+        </relationship>
+    </object>
+</objects>

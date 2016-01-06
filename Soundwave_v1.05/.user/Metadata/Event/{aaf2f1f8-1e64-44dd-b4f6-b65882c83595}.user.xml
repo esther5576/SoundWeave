@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="Event" id="{aaf2f1f8-1e64-44dd-b4f6-b65882c83595}">
+        <relationship name="uiLastParameterSelection">
+            <destination>{a5c6216f-d525-4674-b589-3f38429d90f9}</destination>
+        </relationship>
+    </object>
+    <object class="MasterTrack" id="{16b66d39-a1af-4602-bd69-d33bc62152d9}"/>
+    <object class="MixerInput" id="{8d9cc255-a2a6-4c48-b425-2044aff0647e}"/>
+    <object class="EventAutomatableProperties" id="{7da09cec-c94f-49a6-9605-8def2c07258c}"/>
+    <object class="MarkerTrack" id="{226e485c-e00d-44db-97da-271278f0ce20}"/>
+    <object class="GroupTrack" id="{3f7207b7-beed-4e6b-b98f-eda822d3a6e1}">
+        <property name="uiAutomationTracksVisible">
+            <value>true</value>
+        </property>
+    </object>
+    <object class="GroupTrack" id="{3e032c59-da50-44f5-a6ae-563196e3ffae}">
+        <property name="uiAutomationTracksVisible">
+            <value>true</value>
+        </property>
+    </object>
+    <object class="GroupTrack" id="{1984e02e-27db-4fff-bafe-5be71b303ebd}">
+        <property name="uiAutomationTracksVisible">
+            <value>true</value>
+        </property>
+    </object>
+    <object class="GroupTrack" id="{c76690e3-af37-4697-a009-272043f75b97}">
+        <property name="uiAutomationTracksVisible">
+            <value>true</value>
+        </property>
+    </object>
+    <object class="Timeline" id="{a5c6216f-d525-4674-b589-3f38429d90f9}">
+        <property name="cursorPosition">
+            <value>0</value>
+        </property>
+        <property name="uiLastRulerScaleRatio">
+            <value>0.045819062596876944</value>
+        </property>
+    </object>
+    <object class="GameParameter" id="{fabf3f68-c7d7-424d-8ac3-33983c8eba94}">
+        <property name="cursorPosition">
+            <value>0</value>
+        </property>
+        <property name="uiLastRulerScaleRatio">
+            <value>0.011441647597254004</value>
+        </property>
+    </object>
+    <object class="EventMixerMaster" id="{7d919976-b684-4790-a627-8b2a29985052}">
+        <relationship name="input">
+            <destination>{9df6187d-a533-4356-b9a8-8cca6d684e52}</destination>
+            <destination>{5d3f96b0-4e59-46d5-9502-23fa23da9eef}</destination>
+            <destination>{284d71dc-51dc-4f51-b05c-d1c9d205f60d}</destination>
+            <destination>{90203363-8df2-40df-8819-26374e346e76}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{d5d9f5cf-7b4b-472b-b5f9-644ba8741f11}"/>
+    <object class="MixerBusPanner" id="{7ba33718-d615-4655-905c-aa92e6c35e71}"/>
+    <object class="AutomationTrack" id="{f4ea3519-727e-4f1b-9294-8b5ae8a153e4}"/>
+    <object class="SingleSound" id="{78ebf4e9-aee6-4424-8dbf-6bcc0cc5b23b}"/>
+    <object class="EventMixerGroup" id="{9df6187d-a533-4356-b9a8-8cca6d684e52}"/>
+    <object class="AutomationTrack" id="{a420fd40-2771-4c39-9716-94b5943b142b}"/>
+    <object class="SingleSound" id="{faffc956-c3d1-46d5-bdf1-1fe1e74d8297}"/>
+    <object class="EventMixerGroup" id="{90203363-8df2-40df-8819-26374e346e76}"/>
+    <object class="AutomationTrack" id="{1f25f754-5f73-4854-aaac-42b53e11834e}"/>
+    <object class="SoundScatterer" id="{7d032caf-371d-422e-aaa8-874dbe1ac132}"/>
+    <object class="EventMixerGroup" id="{5d3f96b0-4e59-46d5-9502-23fa23da9eef}"/>
+    <object class="AutomationTrack" id="{7bc11992-6ac0-485c-a844-68100b149b27}"/>
+    <object class="SingleSound" id="{98418e98-bc81-48ab-93dd-55988e41c5db}"/>
+    <object class="EventMixerGroup" id="{284d71dc-51dc-4f51-b05c-d1c9d205f60d}"/>
+    <object class="LoopRegion" id="{59a5e5e5-e9e7-4df9-b3a3-7ff57e28b34e}"/>
+    <object class="MixerBusEffectChain" id="{488c059e-7f61-4466-a183-46ab544475c9}"/>
+    <object class="MixerBusPanner" id="{cb532b01-a198-405e-aaff-f0baffc7e89d}"/>
+    <object class="MixerBusFader" id="{933830b0-4acb-40cc-975f-23a6697a5b76}"/>
+    <object class="MixerBusEffectChain" id="{585f53ae-a1b9-4208-bc2b-9718c2cb3750}"/>
+    <object class="MixerBusPanner" id="{157c8184-6d07-482e-8306-d67780ef7a7b}"/>
+    <object class="MixerBusEffectChain" id="{cf92974b-1d7d-4e8a-ad03-9e6853a2c20e}"/>
+    <object class="MixerBusPanner" id="{1cfd86e1-7a4f-419e-ac21-c188bff03ebf}"/>
+    <object class="RandomizerModulator" id="{1568d3ee-9b98-4609-b831-46f0cf65c6df}"/>
+    <object class="MultiSound" id="{39ba7df8-f510-464a-b497-c0e8de6f8bbc}"/>
+    <object class="MixerBusEffectChain" id="{9cdc0c80-6e85-4ac7-8361-d47fd4dfaddb}"/>
+    <object class="MixerBusPanner" id="{673ff98b-6065-46bd-9c3e-9e84f2030ce3}"/>
+    <object class="MixerBusEffectChain" id="{e34aae4c-3ce8-4532-be03-73ecd5ca1461}"/>
+    <object class="MixerBusPanner" id="{d4707510-a4e9-4866-979a-ab042defb803}"/>
+    <object class="MixerBusFader" id="{df81e017-fbfa-443d-9260-0cc13ba2da61}"/>
+    <object class="SpatialiserEffect" id="{5544be1a-3543-493d-8e8f-9db0a45b442b}"/>
+    <object class="MixerSend" id="{8edcfaad-e7ae-4ffc-b4d9-bbedabbe661d}"/>
+    <object class="FlangerEffect" id="{5cc62122-3a66-4afc-9c30-1f5a35f30107}"/>
+    <object class="MixerBusFader" id="{e0cf11a7-be83-4c6d-941a-898886a10a3a}"/>
+    <object class="SFXReverbEffect" id="{0a769e33-88b6-4f66-9816-f2bb85383468}"/>
+    <object class="MixerBusFader" id="{bfea0190-fd8d-4ba1-9091-a92e3c71a3b8}"/>
+    <object class="SingleSound" id="{93e5c4f8-c811-47e6-9cfd-11225265e24f}"/>
+    <object class="SingleSound" id="{40496448-4425-4321-bfd3-851542831089}"/>
+    <object class="SingleSound" id="{73dabff5-b83a-4fd1-bc27-9ce90d8c56d0}"/>
+    <object class="SingleSound" id="{f3c4528e-909d-431e-9135-6316acc2f24d}"/>
+    <object class="SingleSound" id="{feb424d0-e186-43b6-ae7e-2c1e044c61d3}"/>
+    <object class="MixerBusFader" id="{73e15486-4a81-40b6-ae70-fcf3f81cf984}"/>
+    <object class="DelayEffect" id="{039b2170-8149-4aa3-b16e-8acfdf7fb155}"/>
+    <object class="MixerBusFader" id="{5da18b42-efc5-4d6b-ae98-2582cdb94d0b}"/>
+    <object class="RandomizerModulator" id="{39f8d76d-d07c-4576-9bb3-864b6c6af4d5}"/>
+</objects>

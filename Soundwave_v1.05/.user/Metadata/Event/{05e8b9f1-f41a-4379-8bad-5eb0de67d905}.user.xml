@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.07.00">
+    <object class="Event" id="{05e8b9f1-f41a-4379-8bad-5eb0de67d905}">
+        <relationship name="selectables">
+            <destination>{c9a9ddc8-dc15-40fc-895d-11458cbe0dcc}</destination>
+        </relationship>
+        <relationship name="uiLastParameterSelection">
+            <destination>{79be9aa7-1821-44dd-8fe8-52af14d71872}</destination>
+        </relationship>
+    </object>
+    <object class="MasterTrack" id="{8c9afe20-6203-4e7d-b6ad-9600b0cc54ae}"/>
+    <object class="MixerInput" id="{7d64cdcb-e0ce-440b-8372-e72f6f94fb29}"/>
+    <object class="EventAutomatableProperties" id="{6c7cba81-d330-4be2-b4d6-0d05f1b518cf}"/>
+    <object class="MarkerTrack" id="{89d9aff3-575e-4f67-886e-f2f48df1aa01}"/>
+    <object class="GroupTrack" id="{c349ab39-f200-4eeb-a56c-f2fc7f901b55}"/>
+    <object class="GroupTrack" id="{c9a9ddc8-dc15-40fc-895d-11458cbe0dcc}"/>
+    <object class="Timeline" id="{79be9aa7-1821-44dd-8fe8-52af14d71872}">
+        <property name="cursorPosition">
+            <value>0</value>
+        </property>
+        <property name="uiLastRulerScaleRatio">
+            <value>0.007634854771784232</value>
+        </property>
+    </object>
+    <object class="EventMixerMaster" id="{55e7520e-0c5c-4736-8f20-7c13e58dea6a}">
+        <relationship name="input">
+            <destination>{149b05b5-4829-42f0-84df-aade0acffe90}</destination>
+            <destination>{4b1d2ae7-520f-4726-81bd-baf448d7208f}</destination>
+        </relationship>
+    </object>
+    <object class="MixerBusEffectChain" id="{1f448a08-5075-46a3-a0cd-acc853490479}"/>
+    <object class="MixerBusPanner" id="{0778d3e5-e96c-459d-99d6-fd4e81b07369}"/>
+    <object class="AutomationTrack" id="{7fb06373-730d-42c3-8750-e728aabe1f58}"/>
+    <object class="AutomationTrack" id="{b269b5b6-4802-4f67-8d94-36d1e62fb1be}"/>
+    <object class="SingleSound" id="{ddfd26fe-11a5-4385-bfb6-402446a42841}"/>
+    <object class="EventMixerGroup" id="{149b05b5-4829-42f0-84df-aade0acffe90}">
+        <property name="uiModulationDrawerVisible">
+            <value>true</value>
+        </property>
+    </object>
+    <object class="AutomationTrack" id="{d8348011-1735-4511-b79c-acd8c6394f26}"/>
+    <object class="SingleSound" id="{5bf82125-dcb6-45db-b403-16da833e6c75}"/>
+    <object class="EventMixerGroup" id="{4b1d2ae7-520f-4726-81bd-baf448d7208f}"/>
+    <object class="MixerBusEffectChain" id="{528a7934-dd22-495e-9484-e615103f3312}"/>
+    <object class="MixerBusPanner" id="{b7d53452-0f4b-4dab-bbc1-39b0bcf9e313}"/>
+    <object class="MixerBusFader" id="{f96ffed9-ae6f-409a-ba1d-5393212f86bc}"/>
+    <object class="MixerBusEffectChain" id="{65d60df5-11a7-4557-b654-03ffafff7979}"/>
+    <object class="MixerBusPanner" id="{1f15e2b7-419d-48f5-9753-23ea75071521}"/>
+    <object class="MixerBusEffectChain" id="{94dcc6ae-6cce-462e-9113-602ec3eb31a2}"/>
+    <object class="MixerBusPanner" id="{8700cdd0-ef07-4a9d-9946-86b25779a8a2}"/>
+    <object class="MixerBusFader" id="{9a4984b0-145b-44fc-9d73-bb80975810cf}"/>
+    <object class="SpatialiserEffect" id="{81c7e718-a225-4040-838f-0ffc542a6d64}"/>
+    <object class="MixerSend" id="{06d46ddb-abaa-46ee-a249-2cf40df68e45}"/>
+    <object class="MixerBusFader" id="{1675e4ab-62cf-4c2a-a259-f1dbca7f853b}"/>
+    <object class="PluginEffect" id="{34f8c169-2b77-4795-8a67-4b9e9f67cd96}"/>
+    <object class="SFXReverbEffect" id="{416e328c-c3c6-48cf-a3e2-1ec444e831cb}"/>
+    <object class="MixerBusFader" id="{d8f0404e-b919-45da-875b-c3f973fb1b4a}"/>
+    <object class="PluginEffect" id="{ab518021-2967-4802-8776-a3b9ccf61d8c}"/>
+    <object class="FloatPluginParameter" id="{e8f9f894-3d53-4796-9e8c-d8eea4197028}"/>
+    <object class="FloatPluginParameter" id="{e0b91341-f1ff-46cc-8bf8-f8ac8563a9f4}"/>
+    <object class="FloatPluginParameter" id="{c5db062c-c29b-459d-85c6-0dbe42602aca}"/>
+    <object class="FloatPluginParameter" id="{fe8232db-51dd-421b-b586-07bb00190345}"/>
+    <object class="FloatPluginParameter" id="{b107cfe3-d410-45c6-bf88-b603ab158966}"/>
+    <object class="FloatPluginParameter" id="{5fa2f8d7-8950-4b98-afb8-bc80075c73c2}"/>
+    <object class="FloatPluginParameter" id="{d048d82d-bd3e-4c13-b976-6dfaca935f49}"/>
+    <object class="FloatPluginParameter" id="{2fc25773-0850-4d81-bdd4-3223d2a5f416}"/>
+</objects>
