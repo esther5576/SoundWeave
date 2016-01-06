@@ -102,6 +102,7 @@ public class CharacterMove : MonoBehaviour
 	void FixedUpdate ()
 	{
 		Vector3 _Direction = ((cameraContainer.transform.forward) * Input.GetAxisRaw ("LeftStickY")) + cameraContainer.transform.right * Input.GetAxisRaw ("LeftStickX");
+		//Vector3 _Direction = (Camera.main.transform.forward * Input.GetAxisRaw ("LeftStickY")) + Camera.main.transform.right * Input.GetAxisRaw ("LeftStickX");
 		_Direction *= _Speed;
 		_Rigidbody.velocity = new Vector3 (_Direction.x, _Rigidbody.velocity.y, _Direction.z);
 	}
