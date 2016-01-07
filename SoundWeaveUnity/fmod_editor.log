@@ -25,6 +25,42 @@
 [LOG] Thread::initThread                       : Initializing FMOD Studio load thread.  priority 0
 [LOG] Thread::initThread                       : - Stacksize 65536.  Stack pointer 0000000000000000 : usesemaphore = 0 : sleeptime = 1
 [LOG] Thread::callback                         : * FMOD Studio load thread started
+[LOG] Manager::readBank                        : fileversion = 68, compatVersion = 68 (oldest = 44, newest = 68)
+[LOG] Manager::readBank                        : fileversion = 68, compatVersion = 68 (oldest = 44, newest = 68)
+[LOG] Manager::finishLoadBank                  : Bank with guid {0feb14b1-d0aa-4250-8045-7b6a863bde18} has already been loaded[LOG] SystemI::createSound                     : filename = C:/Users/esther/Documents/GitHub/SoundWeave/Soundwave_v1.05\Build\Desktop\Master Bank.bank : mode 0a010202
+[LOG] SystemI::createSound                     : FMOD_NONBLOCKING specified.  Putting into queue to be opened asynchronously!
+[LOG] OutputSoftware::createSample             : lengthpcm 0, lengthbytes 0, channels 0, format 0, freq 0, mode 00000000
+[LOG] Thread::initThread                       : Initializing FMOD nonblocking thread (0).  priority 1
+[LOG] Thread::initThread                       : - Stacksize 81920.  Stack pointer 0000000000000000 : usesemaphore = 1 : sleeptime = 0
+[LOG] Thread::callback                         : * FMOD nonblocking thread (0) started
+[LOG] SystemI::createSound                     : setdata soundi = 00000000254592C8 : node = 0000000024D01660
+[LOG] SystemI::createSound                     : add node to async list : head = 0000000024BE0C50.  list count = 0
+[LOG] AsyncThread::threadFunc                  : Starting Asynchronous operation on sound 00000000254592C8
+[LOG] SystemI::createSoundInternal             :     filename = C:/Users/esther/Documents/GitHub/SoundWeave/Soundwave_v1.05\Build\Desktop\Master Bank.bank : mode 0a010202
+[LOG] SystemI::createSoundInternal             :     exinfo->cbsize             = 216
+[LOG] SystemI::createSoundInternal             :     exinfo->length             = 1621472
+[LOG] SystemI::createSoundInternal             :     exinfo->fileoffset         = 26304
+[LOG] SystemI::createSoundInternal             :     exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlist      = 0000000024D01768
+[LOG] SystemI::createSoundInternal             :     exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             :     exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             :     exinfo->initialseekpostype = 1
+[LOG] SystemI::createSoundInternal             :     Format has 1 subsounds.
+[LOG] SystemI::createSoundInternal             :     Create as FMOD_CREATESAMPLE
+[LOG] SystemI::createSoundInternal             :     Multi-sample sound (1 subsounds), create a sample container.
+[LOG] SystemI::createSoundInternal             :     creating subsound 0/1
+[LOG] SystemI::createSample                    :     mode 0a010202 length 48000 samples, lengthbytes 12672
+[LOG] SystemI::createSample                    :     channels = 2
+[LOG] SystemI::createSample                    :     output = 0000000025459458
+[LOG] OutputSoftware::createSample             :     lengthpcm 48000, lengthbytes 12672, channels 2, format 2, freq 48000, mode 0a01020a
+[LOG] SystemI::createSoundInternal             :     done.  OpenState now = FMOD_OPENSTATE_READY.
+
+[LOG] AsyncThread::threadFunc                  : Finished Asynchronous operation on sound 00000000254592C8
+[WRN] SoundSourceInstrumentInstance::startChannelIfReady : Loading delay exceeded, sound may play at incorrect time
+[LOG] SoundI::release                          : (null) (00000000254592C8)
+[LOG] SoundI::release                          : release subsounds. (00000000254592C8)
+[LOG] SoundI::release                          :     (null) (0000000025459778)
+[LOG] SoundI::release                          : release codec. (00000000254592C8)
 [LOG] Thread::callback                         : * FMOD Studio load thread finished
 [LOG] Thread::close                            : FMOD Studio load thread thread destroyed
 [LOG] LiveUpdate::release                      : 
@@ -45,6 +81,8 @@
 [LOG] SystemI::close                           : Free channel pool.
 [LOG] SystemI::close                           : Remove miscllaneous DSP stuff.
 [LOG] Global::decRef                           : Shut down streamer and FMOD_NONBLOCKING and FileSystem thread.
+[LOG] Thread::callback                         : * FMOD nonblocking thread (0) finished
+[LOG] Thread::close                            : FMOD nonblocking thread (0) thread destroyed
 [LOG] Global::decRef                           : Shut down file system.
 [LOG] SystemI::close                           : done.
 

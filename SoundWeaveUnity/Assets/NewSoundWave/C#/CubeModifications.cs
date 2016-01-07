@@ -4,39 +4,49 @@ using System.Collections;
 public class CubeModifications : MonoBehaviour
 {
 	#region Bigger Grow cube transformation variables
+
 	public float MaxGrow;
 	public float MinGrow;
 	public bool GrowFunctionActive;
 	public bool IncreaseDecrease;
-	public float GrowSpeed;	
+	public float GrowSpeed;
+
 	#endregion
 
 	#region Bigger Height cube transformation variables
+
 	public float MaxHeight;
 	public float MinHeight;
 	public bool GrowHeightFunctionActive;
 	public bool IncreaseDecreaseHeight;
-	public float GrowHeightSpeed;	
+	public float GrowHeightSpeed;
+
 	#endregion
 
 	#region Turn the cube kinematic after an amount of time
+
 	public float TotalTimerForKinematic;
 	public float ActualTimerForKinematic;
 	public bool ActualKinematicTimerActive;
+
 	#endregion
 
 	#region duplicate cubes variables
+
 	public GameObject prefabCube;
 	public bool divisionOfCubesActive;
 	public float explosionForce = 100;
 	public float explosionRange = 10;
 	public float upwardsModifierOfExplosion = 3.0f;
+
 	#endregion
 
 	#region Turn the cube kinematic after an amount of time
+
 	public float TotalTimerForKinematic2;
 	public float ActualTimerForKinematic2;
 	public bool ActualKinematicTimerActive2;
+
 	#endregion
 
 	public float Force = 100;
@@ -92,6 +102,7 @@ public class CubeModifications : MonoBehaviour
 	}
 
 	#region Bigger Grow cube transformation
+
 	void BiggerGrow ()
 	{
 		if (this.transform.localScale.x < MaxGrow && IncreaseDecrease == true) {
@@ -110,9 +121,11 @@ public class CubeModifications : MonoBehaviour
 			IncreaseDecrease = true;
 		}
 	}
+
 	#endregion
 
 	#region Bigger Height cube transformation
+
 	void BiggerHeight ()
 	{
 		if (this.transform.localScale.y < MaxHeight && IncreaseDecreaseHeight == true) {
@@ -131,9 +144,11 @@ public class CubeModifications : MonoBehaviour
 			IncreaseDecreaseHeight = true;
 		}
 	}
+
 	#endregion
 
 	#region Duplicate the CUBE
+
 	void DuplicateObject ()
 	{
 		GameObject prefab;
@@ -144,6 +159,7 @@ public class CubeModifications : MonoBehaviour
 		divisionOfCubesActive = false;
 		prefab.GetComponent<Rigidbody> ().AddExplosionForce (explosionForce, prefab.transform.position, explosionRange, upwardsModifierOfExplosion);
 	}
+
 	#endregion
 
 	void OnCollisionStay (Collision collider)
@@ -185,4 +201,12 @@ public class CubeModifications : MonoBehaviour
 			}
 		}
 	}
+
+	/*void OnTriggerStay (Collider col)
+	{
+		if (col.tag != "Player") {
+			GrowHeightFunctionActive = false;
+			GrowFunctionActive = false;
+		}
+	}*/
 }

@@ -60,12 +60,14 @@
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\ScreenSpaceAmbientObscurance.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_Antialiasing\NFAA.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\TiltShiftHdrLensBlur.shader" />
+     <None Include="Assets\NewSoundWave\Prefabs\Ball\sIBL Archive\Acknowledgement.txt" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\VignetteShader.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfFieldScatter.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\TessellationShaders\Shaders\BumpedSpecularSmooth.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\Projectors\Guidelines.txt" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\MotionBlur.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBloom.shader" />
+     <None Include="Assets\NewSoundWave\Prefabs\Ball\NoiseBall\Shader\Line.shader" />
      <None Include="Assets\OldWork\other\Spektr\Scatter\Shaders\Disintegration.shader" />
      <None Include="Assets\OldWork\other\Kino\Fringe\Shader\Fringe.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\Contrast Stretch\MinMaxReduction.shader" />
@@ -81,12 +83,14 @@
      <None Include="Assets\OldWork\other\Kino\Bokeh\Shader\Bokeh.shader" />
      <None Include="Assets\OldWork\other\Spektr\Scatter\Shaders\Destruction.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\frag_ao.cginc" />
+     <None Include="Assets\NewSoundWave\Prefabs\Ball\NoiseBall\Shader\SimplexNoiseGrad3D.cginc" />
      <None Include="Assets\OldWork\other\ColorSuite\Shader\ColorSuite.shader" />
      <None Include="Assets\NewSoundWave\Shader\Internal-DeferredShading.shader" />
      <None Include="Assets\OldWork\other\TextAnimation\ClassicNoise3D.cginc" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ToonShading\Shaders\ToonBasicOutline.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\ParticleSystems\Shaders\PriorityParticleAlpha.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_DepthOfField\DepthOfField34.shader" />
+     <None Include="Assets\NewSoundWave\Prefabs\Ball\NoiseBall\Shader\Common.cginc" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\MobileBlur.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\SSAOShader.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\ParticleSystems\ParticleSystemsGuidelines.txt" />
@@ -141,6 +145,7 @@
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\_BloomAndFlares\Blend.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
      <None Include="Assets\OldWork\other\Kino\Ramp\Shader\Ramp.shader" />
+     <None Include="Assets\NewSoundWave\Prefabs\Ball\NoiseBall\Shader\Surface.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\Characters\RollerBall\RollerBallGuidelines.txt" />
      <None Include="Assets\OldWork\other\Standard Assets\Effects\ImageEffects\Shaders\SimpleClear.shader" />
      <None Include="Assets\OldWork\other\Standard Assets\ParticleSystems\Shaders\PriorityParticleAdd.shader" />

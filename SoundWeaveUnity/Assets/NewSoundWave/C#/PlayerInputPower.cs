@@ -4,15 +4,19 @@ using System.Collections;
 public class PlayerInputPower : MonoBehaviour
 {
 	#region push power variables
+
 	//Push Power
 	public float Force;
+
 	#endregion
 
 	#region split power variables
+
 	//Split Power
 	public bool Trigger;
 	public float Timer;
 	public float TotalTime;
+
 	#endregion
 
 	void OnTriggerStay (Collider other)
@@ -21,6 +25,11 @@ public class PlayerInputPower : MonoBehaviour
 
 			#region Height power
 			//HEIGHT Power
+			if (Input.GetKeyDown (KeyCode.Joystick1Button0)) {
+				other.transform.localScale = new Vector3 (other.transform.localScale.x, 2, other.transform.localScale.z);
+				other.GetComponent<CubeModifications> ().IncreaseDecrease = true;
+				other.GetComponent<CubeModifications> ().IncreaseDecreaseHeight = true;
+			}
 			if (Input.GetKey (KeyCode.Joystick1Button0)) {
 				other.GetComponent<CubeModifications> ().GrowHeightFunctionActive = true;
 				other.GetComponent<Renderer> ().material.color = new Color (0.709f, 0.792f, 0.627f);
@@ -35,6 +44,9 @@ public class PlayerInputPower : MonoBehaviour
 
 			#region Grow power
 			//GROW Power
+			if (Input.GetKeyDown (KeyCode.Joystick1Button2)) {
+				other.transform.localScale = new Vector3 (2, other.transform.localScale.y, 2);
+			}
 			if (Input.GetKey (KeyCode.Joystick1Button2)) {
 				other.GetComponent<CubeModifications> ().GrowFunctionActive = true;
 				other.GetComponent<Renderer> ().material.color = new Color (0.647f, 0.870f, 0.894f);
@@ -56,7 +68,7 @@ public class PlayerInputPower : MonoBehaviour
 			if (Input.GetAxis ("360_Triggers") < -0.9) {
 				other.GetComponent<Rigidbody> ().isKinematic = false;
 				other.GetComponent<Rigidbody> ().AddForce (Camera.main.transform.forward * Force, ForceMode.Impulse);
-				other.GetComponent<Renderer> ().material.color = new Color (0.980f, 0.839f, 0.537f);
+				other.GetComponent<Renderer> ().material.color = new Color (0.980f, 0.839f, 0.637f);
 			}
 			#endregion
 

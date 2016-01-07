@@ -8,24 +8,26 @@ public class CharacterMove : MonoBehaviour
 	private Rigidbody _Rigidbody;
 
 	public float _Speed = 1;
-	
+
 	#region Camera system
-	[Tooltip("Aiming system activated")]
+
+	[Tooltip ("Aiming system activated")]
 	public bool
 		aim = false;
 	private float aimingWeight;
 	private float aimingWeight2;
 	private GameObject cameraContainer;
 	private Transform cam;
-	[Tooltip("Normal position of the camera")]
+	[Tooltip ("Normal position of the camera")]
 	public Vector3
 		_normalState = new Vector3 ();
-	[Tooltip("Aiming position of the camera")]
+	[Tooltip ("Aiming position of the camera")]
 	public Vector3
 		_aimingState = new Vector3 ();
 	public Vector3 _dezoomState = new Vector3 ();
 	public bool dezoom;
 	public float zoomDezoomSpeed;
+
 	#endregion
 
 	// Use this for initialization
@@ -41,11 +43,11 @@ public class CharacterMove : MonoBehaviour
 		}
 		#endregion
 	}
-	
+
 	void LateUpdate ()
 	{
-		if (this.GetComponent<Jump> ()._Grounded == false && Input.GetAxisRaw ("RightStickY") > -0.05 && Input.GetAxisRaw ("RightStickY") < 0.05)
-			Debug.Log ("caca");
+		//if (this.GetComponent<Jump> ()._Grounded == false && Input.GetAxisRaw ("RightStickY") > -0.05 && Input.GetAxisRaw ("RightStickY") < 0.05)
+		//Debug.Log ("caca");
 		#region Aiming system
 		//Aiming system
 		if (cameraContainer.GetComponent<CameraSysthemFreeCameraLoopEstherV2> ().tiltAngle <= 0.5f) {
@@ -98,12 +100,17 @@ public class CharacterMove : MonoBehaviour
 		}
 		#endregion
 	}
-	
+
 	void FixedUpdate ()
 	{
 		Vector3 _Direction = ((cameraContainer.transform.forward) * Input.GetAxisRaw ("LeftStickY")) + cameraContainer.transform.right * Input.GetAxisRaw ("LeftStickX");
 		//Vector3 _Direction = (Camera.main.transform.forward * Input.GetAxisRaw ("LeftStickY")) + Camera.main.transform.right * Input.GetAxisRaw ("LeftStickX");
 		_Direction *= _Speed;
 		_Rigidbody.velocity = new Vector3 (_Direction.x, _Rigidbody.velocity.y, _Direction.z);
+		Debug.Log (transform.parent.transform.position.y);
+		if (transform.parent.transform.position.y < 1) {
+			transform.parent.transform.position = new Vector3 (transform.parent.transform.position.x, 1, transform.parent.transform.position.z);
+		}
+
 	}
 }
